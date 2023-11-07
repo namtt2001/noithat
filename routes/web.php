@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\Product;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +32,16 @@ use App\Models\Product;
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
     Route::get('/detail',[UserController::class,'detail'])->name('detail');
 
+    Route::get('/logon',[AdminController::class,'logon'])->name('logon');
+    Route::post('/logon',[AdminController::class,'postLogon'])->name('admin.logon');
+    Route::get('/sign-out',[AdminController::class,'signOut'])->name('admin.signout');
+
 
 
 
 //Admin
 
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->middleware('admin')->group(function(){
     Route::get('/', [DashBoadController::class, 'index'])->name('admin.index');
     Route::resource('category',CategoryControler::class);
     Route::get('/category-trash', [CategoryControler::class, 'trash'])->name('category.trash');

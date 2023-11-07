@@ -1,82 +1,44 @@
+@include('admin.layout.headr')
 
-@extends('admin.master')
-@section('title-page','Quản Lý Sản Phẩm')
-
-    <!-- Main content -->
-    @section('main-content')
-<section class="content">
-
-      <!-- Default box -->
-      <div class="col-xs-12">
-        @if ($message = Session::get('success'))
-           <div class="alert alert-success alert-block">
-	         <button type="button" class="close" data-dismiss="alert">×</button>
-             <strong>{{ $message }}</strong>
-           </div>
-       @endif
-          <div class="box">
-            <div class="box-header">
-           <a href="{{route('product.create')}}" class="btn btn-success">Thêm sản phẩm mới</a>
-           <div class="box-tools">
-            <div class="input-group input-group-sm" style="width: 150px;">
-              <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-              </div>
-            </div>
-          </div>
-
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-                <table class="table table-hover">
-                  <tbody><tr>
-                    <th>STT</th>
-                    <th>Tên Sản phẩm</th>
-                    <th>Giá  </th>
-                    <th>Giá km</th>
-                    <th>Danh mục</th>
-                    <th>ảnh</th>
-                    <th>ngày tạo</th>
-                    <th>Tùy chọn</th>
+    <div class="container-fluid">
+        <div class="row">
+        <h2>Sản phẩm</h2>
+        <div class="text-right">
+        <a class="btn btn-primary" href="{{route("admin.products.create")}}">Thêm sản phẩm</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá sản phẩm</th>
+                    <th>Mô tả</th>
+                    <th>Số lượng</th>
+                    <th>Thao tác</th>
                 </tr>
-
-                @forelse ($product as $item)
-                  <tr>
-                    <td>{{$loop->iteration}}</td>
+            </thead>
+            <tbody>
+                @foreach ($product as $item)
+                <tr>
+                    <td>{{$item->id}}</td>
+                    <td><img style="width: 120px;" src="{{ asset('uploads/' . $item->image) }}" alt="Avatar"></td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->price}}</td>
-                    <td>{{$item->sale_price}}</td>
-                    <td>{{$item->category_id}}</td>
-                    <td>{{$item->sale_price}}</td>
+                    <td>{{$item->description}}</td>
+                    <td>{{$item->quanity}}</td>
                     <td>
-                        <img src="{{asset('storage/images')}}/{{$item->image}}" alt="" width="150px">
-                    </td>
 
-                    <td>
-                    <a href="{{route('product.edit',$item)}}" class="btn btn-success">Sửa</a>
+                        <a href="/admin/products/edit/{{$item->id}}" class="btn btn-primary">Sửa sản phẩm</a>
+                        <form method="POST" action="admin/products/delete/{{$item->id}}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm không?')">Xóa sản phẩm</button>
+                        </form>
                     </td>
-                    <td>
-                    <form action="{{route('product.destroy',$item)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Xóa</button>
-                    </form>
-                    </td>
-                  </tr>
-
-
-                </tbody></table>
-                <a href="{{route('category.trash')}}" class="btn btn-primary"><i class="fa fa-trash"></i> Thùng rác</a>
-              </div>
-          </div>
-          <!-- /.box -->
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
         </div>
-      <!-- /.box -->
-
-    </section>
-
-    @endsection
-
-
+    </div>

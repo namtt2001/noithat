@@ -39,10 +39,10 @@
                     <li class="item-menu narrow"><a href="blog.html">Blog</a></li>
                     <li class="item-menu narrow"><a href="cart.html">Cart</a></li>
                     <li class="item-menu">
-                        <a class="login" href="{{route('login')}}">Log In</a>
+                        <a class="login" href="{{route('login')}}">Đăng Nhập</a>
                     </li>
                     <li class="item-menu">
-                        <a class="login" href="{{route('logout')}}">Logout</a>
+                        <a class="login" href="{{route('logout')}}">Đăng xuất</a>
                     </li>
                 </ul>
                 <span class="separator d-none d-xl-block"></span>
@@ -77,7 +77,9 @@
 
 
             <div class="header-right">
-                <a href="{{route('login')}}" class="header-icon header-icon-user"><i class="icon-user-2"></i></a>
+                @if (Auth::check())
+                <a href="" class="header-icon header-icon-user"><i class="icon-user-2"> {{Auth::user()->name}}</i> </a>
+                @endif
                 <a href="{{route('login')}}" class="header-icon"><i class="icon-wishlist-2"></i></a>
                 <div class="header-search header-search-popup header-search-category d-none d-sm-block">
                     <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i></a>
@@ -243,8 +245,8 @@
                     <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Blog</a></li>
                     <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên Hệ</a></li>
                     <li class="float-right"><a href="https://www.facebook.com/xuonggo.thainguyen.9" class="pl-5 m-0 pr-0" target="_blank"></a></li>
-                    <li class="float-right"><a href="" class="pl-5">@if(auth()->check())
-                        <p>Xin chào {{ auth()->user()->name }}</p>
+                    <li class="float-right"><a href="" class="pl-5">
+                        @if(auth()->check())
                         <p>Chúc bạn một ngày vui vẻ </p>
          <!-- Các thông tin khác bạn muốn hiển thị -->
                          @else
