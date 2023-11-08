@@ -18,6 +18,7 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
+
         return view('admin.product.index',compact('product'));
 
 
@@ -37,40 +38,54 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $storagePath = public_path('uploads');
+        echo $storagePath;
+        if ($request->hasFile('photo')) {
+            $avatar = $request->file('photo');
+            $fileName = time() . '.' . $avatar->getClientOriginalExtension();
+            $avatar->move(public_path('uploads'), $fileName);
+        } else {
+            $fileName = null; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
+        }
 
-        $fileName= $request->photo->getClientOriginalName();
-        $request->photo->storeAs('public/images',$fileName);
-        $request->merge(['image'=>$fileName]);
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->sulg = $request->input('slug');
+        $product->price = $request->input('price');
+        $product->sale_price = $request->input('sale_price');
+        $product->parent_id = $request->input('parent_id');
+        $product->image = $fileName;
+        $product->description = $request->input('description');
 
-        try {
-            $product = Product::create($request->all());
+        $product->save();
 
-            if($product && $request->hash_fil('photos')){
-                foreach ($request ->photos as $key =>$value) {
-                    $fileName = $value->getClientOriginalName();
-                    $value->storeAs('public/images',$fileName);
-                    ImgProduct::create([
-                        'product_id'=>$product->id,
-                        'image'=>$fileName
-                    ]);
-                }
+        $productId = $product->id;
 
+        // Xử lý và thêm danh sách ảnh chi tiết
+        $photos = $request->file('photos');
+        $photoPaths = [];
 
+        if (!empty($photos)) {
+            foreach ($photos as $photo) {
+                $path = $photo->store('product_photos');
+
+                // Thêm ảnh vào bảng product_images và liên kết với sản phẩm bằng product_id
+                ImgProduct::create([
+                    'product_id' => $productId,
+                    'image' => $path,
+                ]);
+                // dd(ImgProduct::create([
+                //     'product_id' => $productId,
+                //     'image' => $path,
+                // ]));
             }
-        } catch (\Throwable $th) {
-            //throw $th;
         }
 
 
+        return redirect()->intended(route('products.index'))->with ('success',' thêm thành công');
 
 
-
-        }
-
-
-
-
-
+    }
 
     /**
      * Display the specified resource.

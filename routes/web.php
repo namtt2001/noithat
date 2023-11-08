@@ -53,6 +53,7 @@ Route::prefix('admin')->middleware('admin')->group(function(){
     //product
     Route::resource('products',ProductController::class);
 
+
     });
 
 

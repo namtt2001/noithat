@@ -186,62 +186,7 @@
                         </div>
                         <!-- End .megamenu -->
                     </li>
-                    <li>
-                        <a href="demo8-product.html">Các loại sản phẩm </a>
-                        <div class="megamenu megamenu-fixed-width">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <a href="#" class="nolink"></a>
-                                    <ul class="submenu">
-                                        <li><a href="product.html">Bàn ăn</a></li>
-                                        <li><a href="product-variable.html">Tủ Rượu</a></li>
-                                        <li><a href="product.html">Ghế sofa </a></li>
-                                        <li><a href="product.html"></a></li>
-                                        <li><a href="product-custom-tab.html"></a></li>
-                                        <li><a href="product-sidebar-left.html"></a></li>
-                                        <li><a href="product-sidebar-right.html"></a></li>
-                                        <li><a href="product-addcart-sticky.html"></a></li>
-                                    </ul>
-                                </div>
-                                <!-- End .col-lg-4 -->
-
-                                <div class="col-lg-4">
-                                    <a href="#" class="nolink"></a>
-                                    <ul class="submenu">
-                                        <li><a href="product-extended-layout.html"></a></li>
-
-                                        <li><a href="product-full-width.html"></a></li>
-                                        <li><a href="product-sticky-info.html"></a></li>
-                                        <li><a href="product-sticky-both.html"></a></li>
-                                        <li><a href="product-transparent-image.html"></a></li>
-                                        <li><a href="product-center-vertical.html"></a></li>
-                                        <li><a href="#">BUILD YOUR OWN</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End .col-lg-4 -->
-
-                                <div class="col-lg-4 p-0">
-                                    <div class="menu-banner menu-banner-2">
-                                        <figure>
-                                            <img src="user/image nt/product/1_10_2.jpg" alt="Menu banner" class="product-promo">
-                                        </figure>
-                                        <i>OFF</i>
-                                        <div class="banner-content">
-                                            <h4>
-                                                <span class="">Sell</span><br />
-                                                <b class="">50%</b>
-                                            </h4>
-                                        </div>
-                                        <a href="category.html" class="btn btn-sm btn-dark">Buy NOW</a>
-                                    </div>
-                                </div>
-                                <!-- End .col-lg-4 -->
-                            </div>
-                            <!-- End .row -->
-                        </div>
-                        <!-- End .megamenu -->
-                    </li>
-
+                    
                     <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Blog</a></li>
                     <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên Hệ</a></li>
                     <li class="float-right"><a href="https://www.facebook.com/xuonggo.thainguyen.9" class="pl-5 m-0 pr-0" target="_blank"></a></li>
