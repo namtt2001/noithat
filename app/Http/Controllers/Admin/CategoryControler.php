@@ -14,10 +14,6 @@ class CategoryControler extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function __construct(){
-
-    }
-
     public function index()
     {
         $categories = Category::all();
@@ -51,7 +47,8 @@ class CategoryControler extends Controller
      */
     public function show(string $id)
     {
-        //
+        $category = Category::find($id);
+        return view('admin.category.index', compact('categories'));
     }
 
     /**

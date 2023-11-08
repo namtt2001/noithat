@@ -37,16 +37,33 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
 
-       //upload file
         $fileName= $request->photo->getClientOriginalName();
         $request->photo->storeAs('public/images',$fileName);
         $request->merge(['image'=>$fileName]);
 
+        try {
+            $product = Product::create($request->all());
+
+            if($product && $request->hash_fil('photos')){
+                foreach ($request ->photos as $key =>$value) {
+                    $fileName = $value->getClientOriginalName();
+                    $value->storeAs('public/images',$fileName);
+                    ImgProduct::create([
+                        'product_id'=>$product->id,
+                        'image'=>$fileName
+                    ]);
+                }
 
 
-       return redirect()->route('product.index');
+            }
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
+
+
+
 
         }
 

@@ -33,12 +33,12 @@
                       </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Chọn Danh Mục Cha</label>
-                        <select name="parent_id" id="input" class="form-control">
+                        <select name="parent_id" id="input" class="form-control" >
                             <option value="">Chọn danh mục cha </option>
-
                             @foreach ($categories as $item)
-                            <option value="{{$item->id}}" >{{$item->name}}</option>
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
+
                         </select>
                     </div>
 
@@ -49,7 +49,7 @@
                             <input type="radio" name="status" id="input" value="1" checked="checked">
                             Hiện</label>
                           <label>
-                            <input type="radio" name="status" id="input" value="0">Ẩn </label>
+                            <input type="radio" name="status" id="input" value="0"> Ẩn </label>
                         </div>
 
                       <!-- /.box-body -->

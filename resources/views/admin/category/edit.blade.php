@@ -29,7 +29,7 @@
                     <div class="box-body">
                       <div class="form-group @error('name') has-error @enderror">
                         <label for="exampleInputEmail1">Tên Danh mục</label>
-                        <input type="text" class="form-control" id="menu" name="name" value="{{ $category->name}}">
+                        <input type="text" class="form-control" id="menu" name="name" value="{{ old('name') ? old('name') : $category->name}}">
                         @error('name')
                       </span class="help-block">{{$message}}</span>
                         @enderror
@@ -38,9 +38,11 @@
                         <label for="exampleInputEmail1">Chọn Danh Mục Cha</label>
                         <select name="parent_id" id="input" class="form-control">
                             <option value="">Chọn danh mục cha </option>
+
                             @foreach ($categories as $item)
-                            <option value="{{$item->id}}"{{$category->parent_id == $item->id ? 'seclected': ''}}>{{$item->name}}</option>
+                             <option value="{{$item ->id}}" {{$category->parent_id == $item->id ? 'seclected' : ''}}>{{$item->name}}</option>
                             @endforeach
+
                         </select>
                     </div>
 
@@ -51,7 +53,7 @@
                             <input type="radio" name="status" id="input" value="1"{{$category->status ? 'checked': ''}} >
                             Hiện</label>
                           <label>
-                            <input type="radio" name="status" id="input" value="0"{{$category->status ? 'checked': ''}}>Ẩn </label>
+                            <input type="radio" name="status" id="input" value="0"{{!$category->status ? 'checked': ''}}>Ẩn </label>
                         </div>
 
                       <!-- /.box-body -->

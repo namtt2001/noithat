@@ -1,6 +1,6 @@
 
 @extends('admin.master')
-@section('title-page','Quản Lý Danh Mục')
+@section('title-page','Thùng rác')
 
     <!-- Main content -->
     @section('main-content')
@@ -16,16 +16,7 @@
        @endif
           <div class="box">
             <div class="box-header">
-           <a href="{{route('category.create')}}" class="btn btn-success">Thêm mới danh mục</a>
-           <div class="box-tools">
-            <div class="input-group input-group-sm" style="width: 150px;">
-              <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-              </div>
-            </div>
-          </div>
 
             </div>
             <!-- /.box-header -->
@@ -48,22 +39,18 @@
                     <td>{{$item->created_at}}</td>
                     <td>{!!$item->status ? '<span class="label label-success">Hiển thị</span>':'<span class="label label-danger">Ẩn</span>'!!}</td>
                     <td>
-                    <a href="{{route('category.edit',$item)}}" class="btn btn-success">Sửa</a>
+                    <a href="{{route('category.restore',$item->id)}}" class="btn btn-success">Khôi phục</a>
+                    <a href="{{route('category.forceDelete',$item->id)}}" onclick="return confirm('ban có chắc')" class="btn btn-danger">Xoá vĩnh viễn</a>
                     </td>
-                    <td>
-                    <form action="{{route('category.destroy',$item)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Xóa</button>
-                    </form>
-                    </td>
+
+
                   </tr>
                   @empty
                   <span>chưa có dữ liệu</span>
                   @endforelse
 
                 </tbody></table>
-                <a href="{{route('category.trash')}}" class="btn btn-primary"><i class="fa fa-trash"></i> Thùng rác</a>
+
               </div>
           </div>
           <!-- /.box -->

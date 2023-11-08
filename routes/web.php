@@ -51,7 +51,7 @@ Route::prefix('admin')->middleware('admin')->group(function(){
 
 
     //product
-    Route::resource('product',ProductController::class);
+    Route::resource('products',ProductController::class);
 
     });
 
