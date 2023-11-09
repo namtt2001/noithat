@@ -37,7 +37,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Chọn Danh Mục Cha</label>
                         <select name="parent_id" id="input" class="form-control">
-                            <option value="">Chọn danh mục cha </option>
+                            <option value="">Danh mục cha </option>
 
                             @foreach ($categories as $item)
                              <option value="{{$item ->id}}" {{$category->parent_id == $item->id ? 'seclected' : ''}}>{{$item->name}}</option>

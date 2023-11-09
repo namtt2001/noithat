@@ -1,6 +1,6 @@
 
 @extends('admin.master')
-@section('title-page','Quản Lý Danh Mục')
+@section('title-page','Danh Sách Danh Mục')
 
     <!-- Main content -->
     @section('main-content')
@@ -16,15 +16,15 @@
        @endif
           <div class="box">
             <div class="box-header">
-           <a href="{{route('category.create')}}" class="btn btn-success">Thêm mới danh mục</a>
-           <div class="box-tools">
-            <div class="input-group input-group-sm" style="width: 150px;">
-              <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-              <div class="input-group-btn">
-                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-              </div>
-            </div>
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+           <div class="box-tools">
+
           </div>
 
             </div>
@@ -44,7 +44,9 @@
                   <tr>
                     <td>{{$loop->iteration}}</td>
                     <td>{{$item->name}}</td>
-                    <td>{{$item->parent_id}}</td>
+                    <td>
+                        {{ $item->parentCategory->name ?? 'null' }}
+                    </td>
                     <td>{{$item->created_at}}</td>
                     <td>{!!$item->status ? '<span class="label label-success">Hiển thị</span>':'<span class="label label-danger">Ẩn</span>'!!}</td>
                     <td>

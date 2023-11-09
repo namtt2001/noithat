@@ -50,7 +50,7 @@ class ProductController extends Controller
 
         $product = new Product();
         $product->name = $request->input('name');
-        $product->sulg = $request->input('slug');
+        $product->slug = $request->input('slug');
         $product->price = $request->input('price');
         $product->sale_price = $request->input('sale_price');
         $product->parent_id = $request->input('parent_id');
@@ -100,7 +100,8 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $product = Product::find($id);
+        return view('admin.product.edit', compact('product'));
     }
 
     /**
@@ -108,7 +109,30 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $storagePath = public_path('uploads');
+        echo $storagePath;
+        if ($request->hasFile('photo')) {
+            $avatar = $request->file('photo');
+            $fileName = time() . '.' . $avatar->getClientOriginalExtension();
+            $avatar->move(public_path('uploads'), $fileName);
+        } else {
+            $fileName = null; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
+        }
+
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->slug = $request->input('slug');
+        $product->price = $request->input('price');
+        $product->sale_price = $request->input('sale_price');
+        $product->parent_id = $request->input('parent_id');
+        $product->image = $fileName;
+        $product->description = $request->input('description');
+
+        $product->save();
+
+        $productId = $product->id;
+        return redirect()->route('products.index');
+
     }
 
     /**
@@ -116,6 +140,10 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('products.index')->with('success',' Xoá   thành công');
+
     }
 }

@@ -83,7 +83,6 @@
 
                 </div>
 
-
             </div>
                 <div class="form-group @error('name') has-error @enderror">
                     <label for="exampleInputEmail1">Mô tả sản phẩm</label>

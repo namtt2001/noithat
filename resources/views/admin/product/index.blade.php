@@ -51,7 +51,9 @@
                     <td>{{$item->name}}</td>
                     <td>{{$item->price}}</td>
                     <td>{{$item->sale_price}}</td>
-                    <td>{{$item->parent_id}}</td>
+                    <td>
+                        {{ $item->parentCategory->name ?? 'null' }}
+                    </td>
                     <td>
                         <img src="{{asset('uploads')}}/{{$item->image}}" alt="" width="100px">
                     </td>
@@ -59,15 +61,15 @@
 
 
                   <td>
-                    <a href="{{route('products.edit',$item)}}" class="btn btn-success">Sửa</a>
+                    <a href="{{route('products.edit',$item->id)}}" class="btn btn-success">Sửa</a>
                   </td>
 
 
                     <td>
-                    <form action="{{route('products.destroy',$item)}}" method="POST">
+                    <form action="{{route('products.destroy',$item->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Xóa</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm không?')">Xóa</button>
                     </form>
                     </td>
                   </tr>
