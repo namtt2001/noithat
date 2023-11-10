@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -40,9 +41,9 @@ class UserController extends Controller
         Auth::logout();
         return redirect()->back();
       }
-      public function detail(){
-
-        return view('page.detail');
+      public function detail( $slug ){
+        $detail= Product::where('slug',$slug)->first();
+        return view('page.detail',compact('detail'));
     }
 
 

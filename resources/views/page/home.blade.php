@@ -77,8 +77,6 @@
                     </a>
                     <div class="banner-meta">
                         <a href="#">Phòng Khách </a>
-
-                        <span class="banner-price"></span> Chỉ từ<strong>99999 VND</strong></span>
                     </div>
                     <!-- End .banner-meta -->
                 </div>
@@ -95,8 +93,6 @@
                     </a>
                     <div class="banner-meta">
                         <a href="#" class="white-nowrap"> Phòng Ăn </a>
-
-                        <span class="banner-price white-nowrap">Chỉ từ <strong>99999 VND</strong></span>
                     </div>
                     <!-- End .banner-meta -->
                 </div>
@@ -113,8 +109,6 @@
                     </a>
                     <div class="banner-meta">
                         <a href="#">Phòng Ngủ</a>
-
-                        <span class="banner-price">Chỉ từ <strong>999999 VND</strong></span>
                     </div>
                     <!-- End .banner-meta -->
                 </div>
@@ -126,328 +120,49 @@
     </div>
     <!-- End .container -->
 
-    <div class="mb-3"></div>
+    <div class="mb-6"></div>
     <!-- margin -->
 
     <div class="container feature-container">
         <h2 class="subtitle text-center">Sản Phẩm Nổi Bật</h2>
         <div class="heading-spacer"></div>
         <div class="row">
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
+            <div class="col-6 col-sm-4  owl-stage-outer" data-animation-delay="100" data-animation-duration="1500">
+                @foreach ( $featuredProducts  as $item )
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-2.jpg" alt="product" width="300" height="300" />
-                            <img src="user/images/demoes/demo8/products/product-8.jpg" alt="product" width="300" height="300" />
+                        <a href="{{route('detail',$item->slug)}}">
+                            <img src="{{ asset('uploads') }}/{{ $item->image }}" alt="product" width="300" height="300" />
                         </a>
-                        <div class="btn-icon-group">
-                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                    class="icon-shopping-cart"></i></a>
-                        </div>
-                        <a href="{{route('detail')}}" class="btn-quickview" title="Quick View">Quick
+                        <a href="{{route('detail',$item->slug)}}" class="btn-quickview" title="Quick View">Quick
                             View</a>
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
                             <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Electronics</a>,
-                                <a href="demo8-shop.html" class="product-category">Fashion</a>,
-                                <a href="demo8-shop.html" class="product-category">watches</a>
-                            </div>
-                            <a href="{{route('detail')}}" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="{{route('detail')}}">Ghế Porto Brown</a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-21.jpg" alt="product" width="300" height="300" />
-                            <img src="user/images/demoes/demo8/products/product-12.jpg" alt="product" width="300" height="300" />
-                        </a>
-                        <div class="btn-icon-group">
-                            <a href="{{route('detail')}}" class="btn-icon btn-add-cart"><i
-                                    class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Fashion</a>,
-                                <a href="demo8-shop.html" class="product-category">Shoes</a>,
-                                <a href="demo8-shop.html" class="product-category">Toys</a>
-                            </div>
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="demo8-product.html">Ghế Tựa </a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:80%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="{{route('detail')}}">
-                            
-                            <img src="user/images/demoes/demo8/products/product-13.jpg" alt="product" width="300" height="300" />
-                        </a>
-                        <div class="btn-icon-group">
-                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                    class="icon-shopping-cart"></i></a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">T-shirts</a>,
-                                <a href="demo8-shop.html" class="product-category">Toys</a>,
-                                <a href="demo8-shop.html" class="product-category">Trousers</a>
-                            </div>
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="{{route('detail')}}">Porto Sports Shoes</a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-10.jpg" alt="product" width="300" height="300" />
+                                <a href="" class="product-category">{{$item->parentCategory->name}}</a>
 
-                        </a>
-                        <div class="label-group">
-                            <span class="product-label label-sale">-23%</span>
-                        </div>
-                        <div class="btn-icon-group">
-                            <a href="demo8-product.html" class="btn-icon btn-add-cart"><i
-                                    class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Fashion</a>
                             </div>
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
+                            <a href="" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
                         </div>
                         <h3 class="product-title">
-                            <a href="{{route('detail')}}">Brown Leather Sofa</a>
+                            <a href="{{route('detail',$item->slug)}}">{{$item->name}}</a>
                         </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND – 888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-22.jpg" alt="product" width="300" height="300" />
 
-                        </a>
-                        <div class="btn-icon-group">
-                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                    class="icon-shopping-cart"></i></a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Dress</a>,
-                                <a href="demo8-shop.html" class="product-category">T-Shirts</a>,
-                                <a href="demo8-shop.html" class="product-category">Watches</a>
-                            </div>
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="demo8-product.html">Headphone Black</a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
                         <!-- End .product-container -->
                         <div class="price-box">
-                            <span class="product-price">888888 VND</span>
+                            <del class="old-price">{{number_format($item->price) }} VND </del>
+                            <span class="product-price">{{number_format($item->sale_price)}} VND</span>
                         </div>
                         <!-- End .price-box -->
                     </div>
                     <!-- End .product-details -->
                 </div>
+
+                @endforeach
             </div>
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-11.jpg" alt="product" width="300" height="300" />
-                            <img src="user/images/demoes/demo8/products/product-16.jpg" alt="product" width="300" height="300" />
-                        </a>
-                        <div class="label-group">
-                            <span class="product-label label-sale">-15%</span>
-                        </div>
-                        <div class="btn-icon-group">
-                            <a href="demo8-product.html" class="btn-icon btn-add-cart"><i
-                                    class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Fashion</a>,
-                                <a href="demo8-shop.html" class="product-category">watches</a>
-                            </div>
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="demo8-product.html">Sofa</a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="old-price">888888 VND</span>
-                            <span class="product-price">888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-23.jpg" alt="product" width="300" height="300" />
-                            <img src="user/images/demoes/demo8/products/product-17.jpg" alt="product" width="300" height="300" />
-                        </a>
-                        <div class="btn-icon-group">
-                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                    class="icon-shopping-cart"></i></a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Dress</a>,
-                                <a href="demo8-shop.html" class="product-category">Shoes</a>,
-                                <a href="demo8-shop.html" class="product-category">T-Shirts</a>
-                            </div>
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="demo8-product.html">Leather Chair</a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
+
             <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
                 <div class="product-default inner-quickview inner-icon">
                     <figure>
@@ -465,11 +180,6 @@
                     </figure>
                     <div class="product-details">
                         <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="demo8-shop.html" class="product-category">Caps</a>,
-                                <a href="demo8-shop.html" class="product-category">Fashion</a>,
-                                <a href="demo8-shop.html" class="product-category">watches</a>
-                            </div>
                             <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                     class="icon-heart"></i></a>
                         </div>
@@ -494,6 +204,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <!-- End .container -->
 
@@ -520,7 +231,7 @@
             <div class="col-md-4 col-sm-6 pb-5 appear-animate" data-animation-name="fadeInRightShorter">
                 <h4 class="subtitle text-left text-uppercase">Top Sản Phẩm</h4>
                 <div class="heading-spacer"></div>
-                <div class="product-default left-details product-widget mb-2">
+                <div class="product-default left-details product-widget mr-3">
                     <figure>
                         <a href="demo8-product.html">
                             <img src="user/images/demoes/demo8/products/product-8.jpg" width="175" height="175" alt="product" />
@@ -550,7 +261,7 @@
                     </div>
                     <!-- End .product-details -->
                 </div>
-                <div class="product-default left-details product-widget mb-2">
+                <div class="product-default left-details product-widget mr-3">
                     <figure>
                         <a href="demo8-product.html">
                             <img src="user/images/demoes/demo8/products/product-21.jpg" width="175" height="175" alt="product" />
@@ -580,7 +291,7 @@
                     </div>
                     <!-- End .product-details -->
                 </div>
-                <div class="product-default left-details product-widget mb-2">
+                <div class="product-default left-details product-widget mr-3">
                     <figure>
                         <a href="demo8-product.html">
                             <img src="user/images/demoes/demo8/products/product-13.jpg" width="175" height="175" alt="product" />
@@ -708,21 +419,21 @@
             <div class="col-md-4 col-sm-6 pb-5 appear-animate" data-animation-name="fadeInLeftShorter">
                 <h4 class="subtitle text-left text-uppercase">Sản phẩm mới nhất</h4>
                 <div class="heading-spacer"></div>
+                @foreach ( $newProducts as $item )
+
                 <div class="product-default left-details product-widget mb-2">
                     <figure>
                         <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-11.jpg" width="175" height="175" alt="banner" />
-                            <img src="user/images/demoes/demo8/products/product-5.jpg" width="175" height="175" alt="product" />
+                            <img src="{{ asset('uploads') }}/{{ $item->image }}" width="175" height="175" alt="banner" />
+
                         </a>
                     </figure>
                     <div class="product-details">
                         <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Accessories</a>,
-                            <a href="demo8-shop.html" class="product-category">Caps</a>,
-                            <a href="demo8-shop.html" class="product-category">Dress</a>,
-                            <a href="demo8-shop.html" class="product-category">Electronics</a>
+                            <a href="demo8-shop.html" class="product-category">{{$item->parentCategory->name}}</a>,
+
                         </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Product Left Sidebar</a> </h3>
+                        <h3 class="product-title"> <a href="demo8-product.html"></a>>{{$item->name}} </h3>
                         <div class="ratings-container">
                             <div class="product-ratings">
                                 <span class="ratings" style="width:0%"></span>
@@ -733,74 +444,16 @@
                         </div>
                         <!-- End .product-container -->
                         <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
+                            <del class="old-price">{{number_format($item->price) }} VND </del>
+                            <span class="product-price">{{number_format($item->sale_price)}} VND</span>
                         </div>
                         <!-- End .price-box -->
                     </div>
                     <!-- End .product-details -->
                 </div>
-                <div class="product-default left-details product-widget mb-2">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-8.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-8.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Accessories</a>,
-                            <a href="demo8-shop.html" class="product-category">Caps</a>,
-                            <a href="demo8-shop.html" class="product-category">Dress</a>,
-                            <a href="demo8-shop.html" class="product-category">Electronics</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Porto Evolution Headset</a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-                <div class="product-default left-details product-widget mb-2">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-13.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-19.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Electronics</a>,
-                            <a href="demo8-shop.html" class="product-category">Fashion</a>,
-                            <a href="demo8-shop.html" class="product-category">Watches</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Porto Brown Chair</a> </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
+
+                @endforeach
+
             </div>
         </div>
         <!-- End .product-widgets -->

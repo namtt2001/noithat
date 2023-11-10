@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <!-- Mirrored from portotheme.com/html/porto_ecommerce/demo8.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Oct 2023 04:31:23 GMT -->
 @include('page.layout.head')
 
@@ -51,6 +49,6 @@
     <!-- End .newsletter-popup -->
 
 
-@include('page.layout.script')
+    @include('page.layout.script')
 <!-- Mirrored from portotheme.com/html/porto_ecommerce/demo8.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Oct 2023 04:32:07 GMT -->
 </html>

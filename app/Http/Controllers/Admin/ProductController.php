@@ -17,7 +17,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = Product::all();
+        $product=Product::all();
+        $product = Product::with('category:id,name')->paginate(10);
 
         return view('admin.product.index',compact('product'));
 
@@ -90,9 +91,9 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+
     }
 
     /**
@@ -142,6 +143,7 @@ class ProductController extends Controller
     {
 
         $product = Product::find($id);
+        $ImgProduct =ImgProduct ::where('product_id', $product->id)->delete();
         $product->delete();
         return redirect()->route('products.index')->with('success',' Xoá   thành công');
 

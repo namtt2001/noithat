@@ -10,7 +10,7 @@
                 <!-- general form elements -->
         <div class="box box-primary">
         <div class="box-header with-border"> thêm mới</div>
-         <form role="form" method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
+        <form role="form" method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
              @csrf
             <div class="box-body">
                 <div class="row">
@@ -82,22 +82,33 @@
                     </div>
 
                 </div>
-
-            </div>
-                <div class="form-group @error('name') has-error @enderror">
-                    <label for="exampleInputEmail1">Mô tả sản phẩm</label>
-                    <textarea name="description" id="editor1" rows="7" cols="80">
-
-                             </textarea>
+                <div class="col-md-6">
+                    <div class="form-group @error('name') has-error @enderror">
+                        <label for="exampleInputEmail1">Sản phẩm nổi bật</label>
+                        <input type="checkbox" id="menu" name="stock" >
+                        @error('name')
+                            </span class="help-block">{{ $message }}</span>
+                        @enderror
+                </div>
                 </div>
 
+
+
+
+            </div>
+            <div class="form-group @error('name') has-error @enderror">
+                <label for="exampleInputEmail1">Mô tả sản phẩm</label>
+                <textarea name="description" id="editor1" rows="7" cols="80">
+
+                         </textarea>
             </div>
 
             <!-- /.box -->
-            <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Thêm mới</button>
-            </div>
-            </form>
+
+        </form>
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Thêm mới</button>
+        </div>
         </div>
 
 

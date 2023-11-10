@@ -156,7 +156,7 @@
                         <div class="megamenu megamenu-fixed-width megamenu-3cols">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <a href="" class="nolink"> thể loại  </a>
+                                    <a href="" class="nolink"> </a>
                                     <ul class="submenu">
                                         <li><a href="">Phòng Khách</a></li>
                                         <li><a href="">Phòng Ngủ</a></li>
@@ -186,7 +186,7 @@
                         </div>
                         <!-- End .megamenu -->
                     </li>
-                    
+
                     <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Blog</a></li>
                     <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên Hệ</a></li>
                     <li class="float-right"><a href="https://www.facebook.com/xuonggo.thainguyen.9" class="pl-5 m-0 pr-0" target="_blank"></a></li>

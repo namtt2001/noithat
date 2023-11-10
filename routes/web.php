@@ -23,6 +23,9 @@ use App\Http\Controllers\Admin\AdminController;
 
 
     Route::get('/',[HomeController::class,'index'])->name('index');
+
+    Route::get('/detail/{slug}',[UserController::class,'detail'])->name('detail');
+
     Route::get('/login',[UserController::class,'login'])->name('login');
     Route::post('/login',[UserController::class,'postLogin']);
 
@@ -30,11 +33,14 @@ use App\Http\Controllers\Admin\AdminController;
     Route::post('/register',[UserController::class,'postRegister']);
 
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
-    Route::get('/detail',[UserController::class,'detail'])->name('detail');
 
     Route::get('/logon',[AdminController::class,'logon'])->name('logon');
     Route::post('/logon',[AdminController::class,'postLogon'])->name('admin.logon');
     Route::get('/sign-out',[AdminController::class,'signOut'])->name('admin.signout');
+
+    //Route::get('/detail/{slug}',[HomeController::class,'detail'])->name('detail');
+
+
 
 
 
