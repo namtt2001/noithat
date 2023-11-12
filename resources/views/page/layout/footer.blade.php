@@ -1,82 +1,93 @@
-<footer class="footer appear-animate">
+<footer class="footer bg-dark">
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
-                    <div class="row row-sm">
-                        <div class="col-sm-4">
-                            <div class="widget">
-                                <h4 class="widget-title">CONTACT INFO</h4>
-                                <ul class="contact-info mb-3">
-                                    <li>
-                                        <span class="contact-info-label">Phone:</span>Toll Free <a href="tel:">(123) 456-7890</a>
-                                    </li>
-                                    <li>
-                                        <span class="contact-info-label">Email:</span> <a href="https://portotheme.com/cdn-cgi/l/email-protection#620f030b0e22071a030f120e074c010d0f"><span class="__cf_email__" data-cfemail="dbb6bab2b79bbea3bab6abb7bef5b8b4b6">[email&#160;protected]</span></a>
-                                    </li>
-
-                                </ul>
-                                <div class="social-icons">
-                                    <a href="#" class="social-icon social-facebook icon-facebook"></a>
-                                    <a href="#" class="social-icon social-twitter icon-twitter"></a>
-                                    <a href="#" class="social-icon social-linkedin fab fa-linkedin-in"></a>
-                                </div>
-
-                            </div>
-                            <!-- End .widget -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4 class="widget-title">Contact Info</h4>
+                        <ul class="contact-info">
+                            <li>
+                                <span class="contact-info-label">Address:</span>123 Street Name, City, England
+                            </li>
+                            <li>
+                                <span class="contact-info-label">Phone:</span><a href="tel:">(123)
+                                    456-7890</a>
+                            </li>
+                            <li>
+                                <span class="contact-info-label">Email:</span> <a href="https://portotheme.com/cdn-cgi/l/email-protection#076a666e6b47627f666a776b622964686a"><span class="__cf_email__" data-cfemail="1974787075597c61787469757c377a7674">[email&#160;protected]</span></a>
+                            </li>
+                            <li>
+                                <span class="contact-info-label">Working Days/Hours:</span> Mon - Sun / 9:00 AM - 8:00 PM
+                            </li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon social-facebook icon-facebook" target="_blank" title="Facebook"></a>
+                            <a href="#" class="social-icon social-twitter icon-twitter" target="_blank" title="Twitter"></a>
+                            <a href="#" class="social-icon social-instagram icon-instagram" target="_blank" title="Instagram"></a>
                         </div>
-                        <!-- End .col-md-3 -->
-                        <div class="col-sm-4">
-                            <div class="widget pl-sm-1">
-                                <h4 class="widget-title">CUSTOMER SERVICE</h4>
-
-                                <ul class="links">
-                                    <li><a href="demo8-about.html">About Us</a></li>
-                                    <li><a href="demo8-contact.html">Liên Hệ </a></li>
-                                    <li><a href="dashboard.html">My Account</a></li>
-                                    <li><a href="#">Orders history</a></li>
-                                    <li><a href="#">Advanced search</a></li>
-                                </ul>
-                            </div>
-                            <!-- End .widget -->
-                        </div>
-                        <!-- End .col-md-5 -->
-
-                        <div class="col-sm-4">
-                            <div class="widget pl-sm-2">
-                                <h4 class="widget-title">Liên Hệ</h4>
-                                <ul class="links">
-                                    <li><a href="demo8-about.html"></a></li>
-                                    <li><a href="demo8-contact.html"></a></li>
-                                    <li><a href="https://www.facebook.com/xuonggo.thainguyen.9"></a></li>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#">Mobile & Retina Optimized</a></li>
-                                </ul>
-                            </div>
-                            <!-- End .widget -->
-                        </div>
-                        <!-- End .col-md-5 -->
-
-
+                        <!-- End .social-icons -->
                     </div>
-                    <!-- End .row -->
+                    <!-- End .widget -->
                 </div>
-                <!-- End .col-lg-8 -->
+                <!-- End .col-lg-3 -->
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4 class="widget-title">Customer Service</h4>
+
+                        <ul class="links">
+                            <li><a href="#">Help & FAQs</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Orders History</a></li>
+                            <li><a href="#">Advanced Search</a></li>
+                            <li><a href="dashboard.html">My Account</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Corporate Sales</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <!-- End .widget -->
+                </div>
+                <!-- End .col-lg-3 -->
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4 class="widget-title">Popular Tags</h4>
+
+                        <div class="tagcloud">
+                            <a href="#">Bag</a>
+                            <a href="#">Black</a>
+                            <a href="#">Blue</a>
+                            <a href="#">Clothes</a>
+                            <a href="#">Fashion</a>
+                            <a href="#">Hub</a>
+                            <a href="#">Shirt</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Skirt</a>
+                            <a href="#">Sports</a>
+                            <a href="#">Sweater</a>
+                        </div>
+                    </div>
+                    <!-- End .widget -->
+                </div>
+                <!-- End .col-lg-3 -->
+
+                <div class="col-lg-3 col-sm-6">
                     <div class="widget widget-newsletter">
                         <h4 class="widget-title">Subscribe newsletter</h4>
                         <p>Get all the latest information on events, sales and offers. Sign up for newsletter:
                         </p>
-                        <form action="#">
-                            <input type="email" class="form-control" placeholder="Email address" required>
+                        <form action="#" class="mb-0">
+                            <input type="email" class="form-control m-b-3" placeholder="Email address" required>
 
-                            <input type="submit" class="btn" value="Go!">
+                            <input type="submit" class="btn btn-primary shadow-none" value="Subscribe">
                         </form>
                     </div>
                     <!-- End .widget -->
                 </div>
-                <!-- End .col-lg-4 -->
+                <!-- End .col-lg-3 -->
             </div>
             <!-- End .row -->
         </div>
@@ -85,21 +96,23 @@
     <!-- End .footer-middle -->
 
     <div class="container">
-        <div class="footer-bottom d-sm-flex align-items-center">
-            <div class="footer-left">
-                <span class="footer-copyright">© copyright 2023. All Rights Reserved.</span>
-            </div>
+        <div class="footer-bottom">
+            <div class="container d-sm-flex align-items-center">
+                <div class="footer-left">
+                    <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+                </div>
 
-            <div class="footer-right ml-auto mt-1 mt-sm-0">
-                <div class="payment-icons mr-0">
-                    <span class="payment-icon visa" style="background-image: url(user/images/payments/payment-visa.svg)"></span>
-                    <span class="payment-icon paypal" style="background-image: url(user/images/payments/payment-paypal.svg)"></span>
-                    <span class="payment-icon stripe" style="background-image: url(user/images/payments/payment-stripe.png)"></span>
-                    <span class="payment-icon verisign" style="background-image:  url(user/images/payments/payment-verisign.svg)"></span>
+                <div class="footer-right ml-auto mt-1 mt-sm-0">
+                    <div class="payment-icons">
+                        <span class="payment-icon visa" style="background-image: url(assets/images/payments/payment-visa.svg)"></span>
+                        <span class="payment-icon paypal" style="background-image: url(assets/images/payments/payment-paypal.svg)"></span>
+                        <span class="payment-icon stripe" style="background-image: url(assets/images/payments/payment-stripe.png)"></span>
+                        <span class="payment-icon verisign" style="background-image:  url(assets/images/payments/payment-verisign.svg)"></span>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- End .footer-bottom -->
     </div>
-    <!-- End .containr -->
+    <!-- End .container -->
 </footer>

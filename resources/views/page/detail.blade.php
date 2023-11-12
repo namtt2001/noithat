@@ -4,7 +4,7 @@
     <div class="container">
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="demo8.html"><i class="icon-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="demo4.html"><i class="icon-home"></i></a></li>
                 <li class="breadcrumb-item"><a href="#">Products</a></li>
             </ol>
         </nav>
@@ -27,11 +27,11 @@
 
                         <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                             <div class="product-item">
-                                <img class="product-single-image" src="user/images/demoes/demo8/products/zoom/product-1-big.jpg" data-zoom-image="user/images/demoes/demo8/products/zoom/product-1-big.jpg" width="468" height="468" alt="product" />
+                                <img class="product-single-image" src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-1-big.jpg" data-zoom-image="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-1-big.jpg" width="468" height="468" alt="product" />
                             </div>
 
                             <div class="product-item">
-                                <img class="product-single-image" src="user/images/demoes/demo8/products/zoom/product-5-big.jpg" data-zoom-image="user/images/demoes/demo8/products/zoom/product-5-big.jpg" width="468" height="468" alt="product" />
+                                <img class="product-single-image" src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-5-big.jpg" data-zoom-image="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-5-big.jpg" width="468" height="468" alt="product" />
                             </div>
                         </div>
                         <!-- End .product-single-carousel -->
@@ -42,19 +42,19 @@
 
                     <div class="prod-thumbnail owl-dots">
                         <div class="owl-dot">
-                            <img src="user/images/demoes/demo8/products/zoom/product-1.jpg" width="110" height="110" alt="product-thumbnail" />
+                            <img src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-1.jpg" width="110" height="110" alt="product-thumbnail" />
                         </div>
                         <div class="owl-dot">
-                            <img src="user/images/demoes/demo8/products/zoom/product-2.jpg" width="110" height="110" alt="product-thumbnail" />
+                            <img src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-2.jpg" width="110" height="110" alt="product-thumbnail" />
                         </div>
                         <div class="owl-dot">
-                            <img src="user/images/demoes/demo8/products/zoom/product-3.jpg" width="110" height="110" alt="product-thumbnail" />
+                            <img src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-3.jpg" width="110" height="110" alt="product-thumbnail" />
                         </div>
                         <div class="owl-dot">
-                            <img src="user/images/demoes/demo8/products/zoom/product-4.jpg" width="110" height="110" alt="product-thumbnail" />
+                            <img src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-4.jpg" width="110" height="110" alt="product-thumbnail" />
                         </div>
                         <div class="owl-dot">
-                            <img src="user/images/demoes/demo8/products/zoom/product-5.jpg" width="110" height="110" alt="product-thumbnail" />
+                            <img src="{{asset('fe-asset')}}/images/demoes/demo4/products/zoom/product-5.jpg" width="110" height="110" alt="product-thumbnail" />
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                                 <span class="product-popup">
                                     <span class="box-content">
                                         <img alt="product" width="150" height="150"
-                                            src="user/images/products/product-3.jpg"
+                                            src="{{asset('fe-asset')}}/images/products/product-3.jpg"
                                             style="padding-top: 0px;">
 
                                         <span>Circled Ultimate 3D Speaker</span>
@@ -88,7 +88,7 @@
                                 <span class="product-popup">
                                     <span class="box-content">
                                         <img alt="product" width="150" height="150"
-                                            src="user/images/products/product-4.jpg"
+                                            src="{{asset('fe-asset')}}/images/products/product-4.jpg"
                                             style="padding-top: 0px;">
 
                                         <span>Blue Backpack for the Young</span>
@@ -242,7 +242,7 @@
                     <div class="product-size-content">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="user/images/products/single/body-shape.png" alt="body shape" width="217" height="398">
+                                <img src="{{asset('fe-asset')}}/images/products/single/body-shape.png" alt="body shape" width="217" height="398">
                             </div>
                             <!-- End .col-md-4 -->
 

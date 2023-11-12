@@ -24,7 +24,7 @@ use App\Http\Controllers\Admin\AdminController;
 
     Route::get('/',[HomeController::class,'index'])->name('index');
 
-    Route::get('/detail/{slug}',[UserController::class,'detail'])->name('detail');
+    Route::get('/products/{slug}/detail',[HomeController::class,'detail'])->name('detail');
 
     Route::get('/login',[UserController::class,'login'])->name('login');
     Route::post('/login',[UserController::class,'postLogin']);

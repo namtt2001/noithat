@@ -1,443 +1,157 @@
 @extends('page.index')
 @section('main')
 <main class="main">
+    <div class="home-slider slide-animate owl-carousel owl-theme show-nav-hover nav-big mb-2 text-uppercase" data-owl-options="{
+        'loop': false}">
+
+        <div class="home-slide home-slide1 banner">
+            <img class="slide-bg" src="{{asset('fe-asset')}}/image nt/product_type/anh1.jpg" width="1903" height="499" alt="slider image">
+            <div class="container d-flex align-items-center">
+                <!-- End .banner-layer -->
+            </div>
+        </div>
+        <div class="home-slide home-slide2 banner banner-md-vw">
+            <img class="slide-bg" style="background-color: #bdb6b6;" width="1903" height="399" src="{{asset('fe-asset')}}/image nt/product_type/anh2.jpg" alt="slider image">
+            <div class="container d-flex align-items-center">
+                <div class="banner-layer d-flex justify-content-center appear-animate" data-animation-name="fadeInUpShorter">
+                    <div class="mx-auto">
+                        <h4 class="m-b-1">Extra</h4>
+                        <h3 class="m-b-2">20% off</h3>
+                        <h3 class="mb-2 heading-border">Accessories</h3>
+                        <h2 class="text-transform-none m-b-4">Summer Sale</h2>
+
+                    </div>
+                </div>
+                <!-- End .banner-layer -->
+            </div>
+        </div>
+        <!-- End .home-slide -->
+    </div>
+    <!-- End .home-slider -->
+
     <div class="container">
-        <div class="home-slider-container">
-            <div class="home-slider owl-carousel owl-theme owl-theme-light nav-outer show-nav-hover slide-animate" data-owl-options="{
-                    'navText': [ '<i class=icon-left-open-big>', '<i class=icon-right-open-big>' ]
-                    }">
-                <div class="home-slide">
-                    <figure style="background-color: #d7b697;">
-                        <img class="slide-bg" src="user/images/demoes/demo8/slider/slide-1.jpg" width="1180" height="569" alt="Home Banner" />
-                    </figure>
-                    <!-- End .slide-bg -->
-                    <div class="home-slide-content sale-banner">
-                        <div class="row no-gutter bg-primary appear-animate" data-animation-name="fadeInLeftShorter">
-                            <div class="col-auto col-md-6 d-flex flex-column justify-content-center col-1">
-                                <h4 class="align-left text-uppercase mb-0 appear-animate" data-animation-name="slideInRight" data-animation-delay="400">Furniture &amp; Garden</h4>
-                                <h3 class="text-white mb-0 align-left text-uppercase appear-animate" data-animation-name="slideInRight" data-animation-delay="400">Huge Sale
-                                </h3>
-                            </div>
+        <div class="info-boxes-slider owl-carousel owl-theme mb-2" data-owl-options="{
+            'dots': false,
+            'loop': false,
+            'responsive': {
+                '576': {
+                    'items': 2
+                },
+                '992': {
+                    'items': 3
+                }
+            }
+        }">
+            <div class="info-box info-box-icon-left">
+                <i class="icon-shipping"></i>
 
-                            <div class="col-auto col-md-6 col-2 appear-animate" data-animation-name="slideInLeft" data-animation-delay="400">
-                                <h2 class="text-white mb-0 position-relative align-left">
-                                    50<small>%<ins>OFF</ins></small>
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="mb-0 text-right">
-                            <a href="demo8-shop.html" class="btn btn-lg btn-dark appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="600">Mua Ngay!</a>
-                        </div>
-                    </div>
+                <div class="info-box-content">
+                    <h4>MIỄN PHÍ VẬN CHUYỂN </h4>
+                    <p class="text-body">Giao hàng miễn phí trên tất cả các đơn đặt hàng trong tỉnh</p>
                 </div>
-                <!-- End .home-slide -->
-
-                <div class="home-slide home-slide-left">
-                    <figure style="background-color: #ceb49d;">
-                        <img class="slide-bg" src="user/images/demoes/demo8/slider/slide-2.jpg" width="1180" height="550" alt="Home Banner" />
-                    </figure>
-                    <!-- End .slide-bg -->
-                    <div class="home-slide-content slide-content-dark sale-banner">
-                        <div class="row no-gutter bg-secondary appear-animate" data-animation-name="fadeInRightShorter">
-                            <div class="col-auto col-md-6 d-flex flex-column justify-content-center col-1">
-                                <h4 class="align-left text-uppercase mb-0 appear-animate" data-animation-name="slideInRight" data-animation-delay="300">Home office sale
-                                </h4>
-                                <h3 class="text-white mb-0 align-left text-uppercase appear-animate" data-animation-name="slideInRight" data-animation-delay="300">mega off
-                                </h3>
-                            </div>
-
-                            <div class="col-auto col-md-6 col-2 appear-animate" data-animation-name="slideInLeft" data-animation-delay="300">
-                                <h2 class="text-white mb-0 position-relative align-left">
-                                    50<small>%<ins>OFF</ins></small>
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="mb-0">
-                            <a href="demo8-shop.html" class="btn btn-lg btn-primary appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="600">Mua Ngay!</a>
-                        </div>
-                    </div>
-                    <!-- End .home-slide-content -->
-                </div>
-                <!-- End .home-slide -->
+                <!-- End .info-box-content -->
             </div>
-            <!-- End .home-slider -->
+            <!-- End .info-box -->
+
+            <div class="info-box info-box-icon-left">
+                <i class="icon-money"></i>
+
+                <div class="info-box-content">
+                    <h4>MONEY BACK GUARANTEE</h4>
+                    <p class="text-body">100% money back guarantee</p>
+                </div>
+                <!-- End .info-box-content -->
+            </div>
+            <!-- End .info-box -->
+
+            <div class="info-box info-box-icon-left">
+                <i class="icon-support"></i>
+
+                <div class="info-box-content">
+                    <h4>ONLINE SUPPORT 24/7</h4>
+                    <p class="text-body">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <!-- End .info-box-content -->
+            </div>
+            <!-- End .info-box -->
         </div>
-        <!-- End .home-slider-container -->
+        <!-- End .info-boxes-slider -->
+
+        <div class="banners-container mb-2">
+            <div class="banners-slider owl-carousel owl-theme" data-owl-options="{
+                'dots': false
+            }">
+                <div class="banner banner1 banner-sm-vw d-flex align-items-center appear-animate" style="background-color: #ccc;" data-animation-name="fadeInLeftShorter" data-animation-delay="400">
+                    <figure class="w-100">
+                        <img src="{{asset('fe-asset')}}/images/demoes/demo4/banners/banner.jpg" alt="banner" width="380" height="100" />
+                    </figure>
+                    <div class="banner-layer">
+                        <h3 class="m-b-2">Phòng Khách </h3>
+                        <a href="category.html" class="btn btn-sm btn-dark">Mua ngay</a>
+                    </div>
+                </div>
+                <!-- End .banner -->
+                <div class="banner banner1 banner-sm-vw d-flex align-items-center appear-animate" style="background-color: #ccc;" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
+                    <figure class="w-100">
+                        <img src="{{asset('fe-asset')}}/images/demoes/demo4/banners/banner2.jpg" alt="banner" width="380" height="175" />
+                    </figure>
+                    <div class="banner-layer">
+                        <h3 class="m-b-2">Phòng Ăn </h3>
+                        <a href="category.html" class="btn btn-sm btn-dark">Mua ngay</a>
+                    </div>
+                </div>
+                <!-- End .banner -->
+                <div class="banner banner1 banner-sm-vw d-flex align-items-center appear-animate" style="background-color: #ccc;" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
+                    <figure class="w-100">
+                        <img src="{{asset('fe-asset')}}/images/demoes/demo4/banners/banner4.jpg" alt="banner" width="380" height="175" />
+                    </figure>
+                    <style>
+                        .banner-layer h3 {
+                          color: rgb(126, 7, 47); /* Thiết lập màu trắng cho văn bản trong phần tử h3 */
+                        }
+                      </style>
+                    <div class="banner-layer">
+                        <h3 class="m-b-2">Phòng Ngủ </h3>
+                        <a href="category.html" class="btn btn-sm btn-dark">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- End .container -->
 
-    <div class="container banner-container">
-        <div class="row justify-content-center">
-            <div class="col-md-4 col-sm-6 mt-3 mt-md-0 appear-animate" data-animation-name="fadeInRightShorter" data-y="200">
-                <h3 class="subtitle">PHÒNG KHÁCH</h3>
-                <div class="heading-spacer"></div>
-                <div class="banner banner-image">
-                    <a href="#">
-                        <img src="user/images/demoes/demo8/banners/banner-living.jpg" style="background-color: #e4ddd7;" width="360" height="270" alt="banner" />
-                    </a>
-                    <div class="banner-meta">
-                        <a href="#">Phòng Khách </a>
-                    </div>
-                    <!-- End .banner-meta -->
-                </div>
-                <!-- End .banner -->
-            </div>
-            <!-- End .col-md-4 -->
+    <section class="featured-products-section">
+        <div class="container">
+            <h2 class="section-title heading-border ls-20 border-0">SẢN PHẨM NỔI BẬT</h2>
 
-            <div class="col-md-4 col-sm-6 mt-3 mt-md-0 appear-animate" data-animation-duration="1500">
-                <h3 class="subtitle">PHÒNG ĂN</h3>
-                <div class="heading-spacer"></div>
-                <div class="banner banner-image">
-                    <a href="#">
-                        <img src="user/images/demoes/demo8/banners/banner-dining.jpg" style="background-color: #e4ddd7;" alt="banner" width="360" height="270" />
-                    </a>
-                    <div class="banner-meta">
-                        <a href="#" class="white-nowrap"> Phòng Ăn </a>
-                    </div>
-                    <!-- End .banner-meta -->
-                </div>
-                <!-- End .banner -->
-            </div>
-            <!-- End .col-md-4 -->
+            <div class="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center" data-owl-options="{
+                'dots': false,
+                'nav': true}">
+                @foreach ($featuredProducts as $item )
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
 
-            <div class="col-md-4 col-sm-6 mt-3 mt-md-0 appear-animate" data-animation-name="fadeInLeftShorter">
-                <h3 class="subtitle">PHÒNG NGỦ</h3>
-                <div class="heading-spacer"></div>
-                <div class="banner banner-image">
-                    <a href="#">
-                        <img src="user/images/demoes/demo8/banners/banner-bedroom.jpg" style="background-color: #e4ddd7;" alt="banner" width="360" height="270" />
-                    </a>
-                    <div class="banner-meta">
-                        <a href="#">Phòng Ngủ</a>
-                    </div>
-                    <!-- End .banner-meta -->
-                </div>
-                <!-- End .banner -->
-
-            <!-- End .col-md-4 -->
-        </div>
-        <!-- End .row -->
-    </div>
-    <!-- End .container -->
-
-    <div class="mb-6"></div>
-    <!-- margin -->
-
-    <div class="container feature-container">
-        <h2 class="subtitle text-center">Sản Phẩm Nổi Bật</h2>
-        <div class="heading-spacer"></div>
-        <div class="row">
-            <div class="col-6 col-sm-4  owl-stage-outer" data-animation-delay="100" data-animation-duration="1500">
-                @foreach ( $featuredProducts  as $item )
-                <div class="product-default inner-quickview inner-icon">
                     <figure>
                         <a href="{{route('detail',$item->slug)}}">
-                            <img src="{{ asset('uploads') }}/{{ $item->image }}" alt="product" width="300" height="300" />
+                            <img src="{{ asset('uploads') }}/{{ $item->image }}" width="280" height="280" alt="product">
+                            
+
                         </a>
-                        <a href="{{route('detail',$item->slug)}}" class="btn-quickview" title="Quick View">Quick
-                            View</a>
+                        <div class="label-group">
+                            <div class="product-label label-hot">HOT</div>
+                            <div class="product-label label-sale">-20%</div>
+                        </div>
                     </figure>
                     <div class="product-details">
-                        <div class="category-wrap">
-                            <div class="category-list">
-                                <a href="" class="product-category">{{$item->parentCategory->name}}</a>
-
-                            </div>
-                            <a href="" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
+                        <div class="category-list">
+                            <a href="" class="product-category">{{$item->parentCategory->name}}</a>
                         </div>
                         <h3 class="product-title">
                             <a href="{{route('detail',$item->slug)}}">{{$item->name}}</a>
                         </h3>
-
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <del class="old-price">{{number_format($item->price) }} VND </del>
-                            <span class="product-price">{{number_format($item->sale_price)}} VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-
-                @endforeach
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-3 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <div class="product-default inner-quickview inner-icon">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-24.jpg" alt="product" width="300" height="300" />
-                            <img src="user/images/demoes/demo8/products/product-18.jpg" alt="product" width="300" height="300" />
-                        </a>
-                        <div class="btn-icon-group">
-                            <a href="demo8-product.html" class="btn-icon btn-add-cart"><i
-                                    class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                            View</a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-wrap">
-                            <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
-                                    class="icon-heart"></i></a>
-                        </div>
-                        <h3 class="product-title">
-                            <a href="demo8-product.html">Ghế đơn </a>
-                        </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- End .container -->
-
-    <div class="sale-banner banner appear-animate" data-animation-delay="100" data-animation-duration="1500">
-        <div class="container banner-content">
-            <div class="row no-gutter bg-secondary">
-                <div class="col-auto col-md-4 d-flex flex-column justify-content-center col-1">
-                    <h4 class="align-left text-uppercase mb-0">Furniture &amp; Garden</h4>
-                    <h3 class="text-white mb-0 align-left text-uppercase">Huge Sale</h3>
-                </div>
-                <div class="col-auto col-md-4 col-2">
-                    <h5 class="text-white mb-0 position-relative align-left">50<small>%<ins>OFF</ins></small>
-                    </h5>
-                </div>
-                <div class="mb-0 col-md-4 col-3 col-auto">
-                    <a href="demo8-shop.html" class="btn btn-lg btn-primary">Mua Ngay!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="product-widgets row pt-1">
-            <div class="col-md-4 col-sm-6 pb-5 appear-animate" data-animation-name="fadeInRightShorter">
-                <h4 class="subtitle text-left text-uppercase">Top Sản Phẩm</h4>
-                <div class="heading-spacer"></div>
-                <div class="product-default left-details product-widget mr-3">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-8.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-1.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">caps</a>,
-                            <a href="demo8-shop.html" class="product-category">fashion</a>,
-                            <a href="demo8-shop.html" class="product-category">t-shirts</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Ghế ARM </a> </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:100%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-                <div class="product-default left-details product-widget mr-3">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-21.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-6.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Fashion</a>,
-                            <a href="demo8-shop.html" class="product-category">Shoes</a>,
-                            <a href="demo8-shop.html" class="product-category">Toys</a>
-                        </div>
-
                         <div class="ratings-container">
                             <div class="product-ratings">
                                 <span class="ratings" style="width:80%"></span>
                                 <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top">4.00</span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-                <div class="product-default left-details product-widget mr-3">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-13.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-23.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Accessories</a>,
-                            <a href="demo8-shop.html" class="product-category">Caps</a>,
-                            <a href="demo8-shop.html" class="product-category">Dress</a>,
-                            <a href="demo8-shop.html" class="product-category">Electronics</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Red Chair</a> </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 pb-5 appear-animate" data-animation-delay="100" data-animation-duration="1500">
-                <h4 class="subtitle text-left text-uppercase">Sản Phẩm Bán Chạy</h4>
-                <div class="heading-spacer"></div>
-                <div class="product-default left-details product-widget mb-2">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-19.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-9.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Fashion</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Brown Leather Sofa</a> </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">888888 VND – 888888 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-                <div class="product-default left-details product-widget mb-2">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-11.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-11.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">Accessories</a>,
-                            <a href="demo8-shop.html" class="product-category">Caps</a>,
-                            <a href="demo8-shop.html" class="product-category">Dress</a>,
-                            <a href="demo8-shop.html" class="product-category">Electronics</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Product Extended</a> </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">VND105.00</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-                <div class="product-default left-details product-widget mb-2">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="user/images/demoes/demo8/products/product-9.jpg" width="175" height="175" alt="product" />
-                            <img src="user/images/demoes/demo8/products/product-24.jpg" width="175" height="175" alt="product" />
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">T-shirts</a>,
-                            <a href="demo8-shop.html" class="product-category">Toys</a>,
-                            <a href="demo8-shop.html" class="product-category">Trousers</a>
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html">Porto Sports Shoes</a> </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
-                                <span class="tooltiptext tooltip-top"></span>
-                            </div>
-                            <!-- End .product-ratings -->
-                        </div>
-                        <!-- End .product-container -->
-                        <div class="price-box">
-                            <span class="product-price">999999 VND – 999999 VND</span>
-                        </div>
-                        <!-- End .price-box -->
-                    </div>
-                    <!-- End .product-details -->
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 pb-5 appear-animate" data-animation-name="fadeInLeftShorter">
-                <h4 class="subtitle text-left text-uppercase">Sản phẩm mới nhất</h4>
-                <div class="heading-spacer"></div>
-                @foreach ( $newProducts as $item )
-
-                <div class="product-default left-details product-widget mb-2">
-                    <figure>
-                        <a href="demo8-product.html">
-                            <img src="{{ asset('uploads') }}/{{ $item->image }}" width="175" height="175" alt="banner" />
-
-                        </a>
-                    </figure>
-                    <div class="product-details">
-                        <div class="category-list">
-                            <a href="demo8-shop.html" class="product-category">{{$item->parentCategory->name}}</a>,
-
-                        </div>
-                        <h3 class="product-title"> <a href="demo8-product.html"></a>>{{$item->name}} </h3>
-                        <div class="ratings-container">
-                            <div class="product-ratings">
-                                <span class="ratings" style="width:0%"></span>
-                                <!-- End .ratings -->
                                 <span class="tooltiptext tooltip-top"></span>
                             </div>
                             <!-- End .product-ratings -->
@@ -448,6 +162,14 @@
                             <span class="product-price">{{number_format($item->sale_price)}} VND</span>
                         </div>
                         <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="product.html" class="btn-icon btn-add-cart"><i
+                                    class="fa fa-arrow-right"></i><span>Mua Ngay</span></a>
+                            <a href="{{route('detail',$item->slug)}}" class="btn-quickview" title="Xem chi tiết"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <!-- End .product-details -->
                 </div>
@@ -455,27 +177,693 @@
                 @endforeach
 
             </div>
+            <!-- End .featured-proucts -->
         </div>
-        <!-- End .product-widgets -->
-    </div>
-    <div class="facebook-section appear-animate">
-        <h3 class="subtitle text-uppercase">Follow Me</h3>
-        <div class="heading-spacer"></div>
-        <div class="owl-carousel owl-theme instagram-feed-carousel facebook-feed-list">
-            <a href="https://www.facebook.com/xuonggo.thainguyen.9"><img src="user/images/demoes/demo8/instagram/1.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/2.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/3.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/4.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/5.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/6.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/7.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/8.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/9.jpg" width="197" height="150" alt="Feed"></a>
-            <a href="#"><img src="user/images/demoes/demo8/instagram/10.jpg" width="197" height="150" alt="Feed"></a>
-        </div>
-        <!-- End .instagram-feed-carousel -->
-    </div>
-    <!-- End .instagram-section -->
-</main>
-@endsection
+    </section>
 
+    <section class="new-products-section">
+        <div class="container">
+            <h2 class="section-title heading-border ls-20 border-0">New Arrivals</h2>
+
+            <div class="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center mb-2" data-owl-options="{
+                'dots': false,
+                'nav': true,
+                'responsive': {
+                    '992': {
+                        'items': 4
+                    },
+                    '1000': {
+                        'items': 5
+                    }
+                }
+             }">
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                    <figure>
+                        <a href="product.html">
+                            <img src="{{asset('fe-asset')}}/images/products/product-6.jpg" width="220" height="150" alt="product">
+
+                        <div class="label-group">
+                            <div class="product-label label-hot">HOT</div>
+                        </div>
+                    </figure>
+                    <div class="product-details">
+                        <div class="category-list">
+                            <a href="category.html" class="product-category">Category</a>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="product.html">Men Black Gentle Belt</a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:80%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <del class="old-price">$59.00</del>
+                            <span class="product-price">$49.00</span>
+                        </div>
+                        <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
+                                    class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <!-- End .product-details -->
+                </div>
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                    <figure>
+                        <a href="product.html">
+                            <img src="{{asset('fe-asset')}}/images/products/product-7.jpg" width="220" height="220" alt="product">
+                            <img src="{{asset('fe-asset')}}/images/products/product-7-2.jpg" width="220" height="220" alt="product">
+                        </a>
+                        <div class="label-group">
+                            <div class="product-label label-hot">HOT</div>
+                        </div>
+                    </figure>
+                    <div class="product-details">
+                        <div class="category-list">
+                            <a href="category.html" class="product-category">Category</a>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="product.html">Brown-Black Men Casual Glasses</a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:80%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <del class="old-price">$59.00</del>
+                            <span class="product-price">$49.00</span>
+                        </div>
+                        <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
+                                    class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <!-- End .product-details -->
+                </div>
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                    <figure>
+                        <a href="product.html">
+                            <img src="{{asset('fe-asset')}}/images/products/product-8.jpg" width="220" height="220" alt="product">
+                            <img src="{{asset('fe-asset')}}/images/products/product-8-2.jpg" width="220" height="220" alt="product">
+                        </a>
+                        <div class="label-group">
+                            <div class="product-label label-sale">-20%</div>
+                        </div>
+                    </figure>
+                    <div class="product-details">
+                        <div class="category-list">
+                            <a href="category.html" class="product-category">Category</a>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="product.html">Brown-Black Men Casual Glasses</a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:80%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <del class="old-price">$59.00</del>
+                            <span class="product-price">$49.00</span>
+                        </div>
+                        <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
+                                    class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <!-- End .product-details -->
+                </div>
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                    <figure>
+                        <a href="product.html">
+                            <img src="{{asset('fe-asset')}}/images/products/product-9.jpg" width="220" height="220" alt="product">
+                            <img src="{{asset('fe-asset')}}/images/products/product-9-2.jpg" width="220" height="220" alt="product">
+                        </a>
+                        <div class="label-group">
+                            <div class="product-label label-sale">-30%</div>
+                        </div>
+                    </figure>
+                    <div class="product-details">
+                        <div class="category-list">
+                            <a href="category.html" class="product-category">Category</a>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="product.html">Black Men Casual Glasses</a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:80%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <del class="old-price">$59.00</del>
+                            <span class="product-price">$49.00</span>
+                        </div>
+                        <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="product.html" class="btn-icon btn-add-cart"><i
+                                    class="fa fa-arrow-right"></i><span>SELECT
+                                    OPTIONS</span></a>
+                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <!-- End .product-details -->
+                </div>
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                    <figure>
+                        <a href="product.html">
+                            <img src="{{asset('fe-asset')}}/images/products/product-10.jpg" width="220" height="220" alt="product">
+                            <img src="{{asset('fe-asset')}}/images/products/product-10-2.jpg" width="220" height="220" alt="product">
+                        </a>
+                        <div class="label-group">
+                            <div class="product-label label-hot">HOT</div>
+                        </div>
+                    </figure>
+                    <div class="product-details">
+                        <div class="category-list">
+                            <a href="category.html" class="product-category">Category</a>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="product.html">Basketball Sports Blue Shoes</a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:80%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <del class="old-price">$59.00</del>
+                            <span class="product-price">$49.00</span>
+                        </div>
+                        <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
+                                    class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <!-- End .product-details -->
+                </div>
+                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                    <figure>
+                        <a href="product.html">
+                            <img src="{{asset('fe-asset')}}/images/products/product-11.jpg" width="220" height="220" alt="product">
+                            <img src="{{asset('fe-asset')}}/images/products/product-11-2.jpg" width="220" height="220" alt="product">
+                        </a>
+                        <div class="label-group">
+                            <div class="product-label label-sale">-20%</div>
+                        </div>
+                    </figure>
+                    <div class="product-details">
+                        <div class="category-list">
+                            <a href="category.html" class="product-category">Category</a>
+                        </div>
+                        <h3 class="product-title">
+                            <a href="product.html">Men Sports Travel Bag</a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:80%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <del class="old-price">$59.00</del>
+                            <span class="product-price">$49.00</span>
+                        </div>
+                        <!-- End .price-box -->
+                        <div class="product-action">
+                            <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
+                                    class="icon-heart"></i></a>
+                            <a href="product.html" class="btn-icon btn-add-cart"><i
+                                    class="fa fa-arrow-right"></i><span>SELECT
+                                    OPTIONS</span></a>
+                            <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <!-- End .product-details -->
+                </div>
+            </div>
+            <!-- End .featured-proucts -->
+        </div>
+    </section>
+    <!-- End .feature-boxes-container -->
+    <section class="blog-section pb-0">
+        <div class="container">
+            <h2 class="section-title heading-border border-0 appear-animate" data-animation-name="fadeInUp">
+                Latest News</h2>
+
+            <div class="owl-carousel owl-theme appear-animate" data-animation-name="fadeIn" data-owl-options="{
+                'loop': false,
+                'margin': 20,
+                'autoHeight': true,
+                'autoplay': false,
+                'dots': false,
+                'items': 2,
+                'responsive': {
+                    '0': {
+                        'items': 1
+                    },
+                    '480': {
+                        'items': 2
+                    },
+                    '576': {
+                        'items': 3
+                    },
+                    '768': {
+                        'items': 4
+                    }
+                }
+            }">
+                <article class="post">
+                    <div class="post-media">
+                        <a href="single.html">
+                            <img src="{{asset('fe-asset')}}/images/blog/home/post-1.jpg" alt="Post" width="225" height="280">
+                        </a>
+                        <div class="post-date">
+                            <span class="day">26</span>
+                            <span class="month">Feb</span>
+                        </div>
+                    </div>
+                    <!-- End .post-media -->
+
+                    <div class="post-body">
+                        <h2 class="post-title">
+                            <a href="single.html">Top New Collection</a>
+                        </h2>
+                        <div class="post-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non placerat mi. Etiam non tellus sem. Aenean...</p>
+                        </div>
+                        <!-- End .post-content -->
+                        <a href="single.html" class="post-comment">0 Comments</a>
+                    </div>
+                    <!-- End .post-body -->
+                </article>
+                <!-- End .post -->
+
+                <article class="post">
+                    <div class="post-media">
+                        <a href="single.html">
+                            <img src="{{asset('fe-asset')}}/images/blog/home/post-2.jpg" alt="Post" width="225" height="280">
+                        </a>
+                        <div class="post-date">
+                            <span class="day">26</span>
+                            <span class="month">Feb</span>
+                        </div>
+                    </div>
+                    <!-- End .post-media -->
+
+                    <div class="post-body">
+                        <h2 class="post-title">
+                            <a href="single.html">Fashion Trends</a>
+                        </h2>
+                        <div class="post-content">
+                            <p>Leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of...</p>
+                        </div>
+                        <!-- End .post-content -->
+                        <a href="single.html" class="post-comment">0 Comments</a>
+                    </div>
+                    <!-- End .post-body -->
+                </article>
+                <!-- End .post -->
+
+                <article class="post">
+                    <div class="post-media">
+                        <a href="single.html">
+                            <img src="{{asset('fe-asset')}}/images/blog/home/post-3.jpg" alt="Post" width="225" height="280">
+                        </a>
+                        <div class="post-date">
+                            <span class="day">26</span>
+                            <span class="month">Feb</span>
+                        </div>
+                    </div>
+                    <!-- End .post-media -->
+
+                    <div class="post-body">
+                        <h2 class="post-title">
+                            <a href="single.html">Right Choices</a>
+                        </h2>
+                        <div class="post-content">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the...</p>
+                        </div>
+                        <!-- End .post-content -->
+                        <a href="single.html" class="post-comment">0 Comments</a>
+                    </div>
+                    <!-- End .post-body -->
+                </article>
+                <!-- End .post -->
+
+                <article class="post">
+                    <div class="post-media">
+                        <a href="single.html">
+                            <img src="{{asset('fe-asset')}}/images/blog/home/post-4.jpg" alt="Post" width="225" height="280">
+                        </a>
+                        <div class="post-date">
+                            <span class="day">26</span>
+                            <span class="month">Feb</span>
+                        </div>
+                    </div>
+                    <!-- End .post-media -->
+
+                    <div class="post-body">
+                        <h2 class="post-title">
+                            <a href="single.html">Perfect Accessories</a>
+                        </h2>
+                        <div class="post-content">
+                            <p>Leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of...</p>
+                        </div>
+                        <!-- End .post-content -->
+                        <a href="single.html" class="post-comment">0 Comments</a>
+                    </div>
+                    <!-- End .post-body -->
+                </article>
+                <!-- End .post -->
+            </div>
+
+            <hr class="mt-0 m-b-5">
+
+            <div class="brands-slider owl-carousel owl-theme images-center appear-animate" data-animation-name="fadeIn" data-animation-duration="500" data-owl-options="{
+            'margin': 0}">
+                <img src="{{asset('fe-asset')}}/images/brands/brand1.png" width="130" height="56" alt="brand">
+                <img src="{{asset('fe-asset')}}/images/brands/brand2.png" width="130" height="56" alt="brand">
+                <img src="{{asset('fe-asset')}}/images/brands/brand3.png" width="130" height="56" alt="brand">
+                <img src="{{asset('fe-asset')}}/images/brands/brand4.png" width="130" height="56" alt="brand">
+                <img src="{{asset('fe-asset')}}/images/brands/brand5.png" width="130" height="56" alt="brand">
+                <img src="{{asset('fe-asset')}}/images/brands/brand6.png" width="130" height="56" alt="brand">
+            </div>
+            <!-- End .brands-slider -->
+
+            <hr class="mt-4 m-b-5">
+
+            <div class="product-widgets-container row pb-2">
+                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
+                    <h4 class="section-sub-title">SẢN PHẨM NỔI BẬT</h4>
+                    @foreach ($featuredProducts as $item)
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="{{route('detail',$item->slug)}}">
+                                <img src="{{ asset('uploads') }}/{{ $item->image }}" width="84" height="84" alt="product">
+
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">{{$item->name}}</a>
+                            </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">{{number_format($item->sale_price)}} VND</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+
+                    @endforeach
+
+
+                </div>
+
+                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
+                    <h4 class="section-sub-title">Best Selling Products</h4>
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="product.html">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-4.jpg" width="84" height="84" alt="product">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-4-2.jpg" width="84" height="84" alt="product">
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">Blue Backpack for the Young -
+                                    S</a> </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top">5.00</span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">$49.00</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="product.html">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-5.jpg" width="84" height="84" alt="product">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-5-2.jpg" width="84" height="84" alt="product">
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">Casual Spring Blue Shoes</a> </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">$49.00</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="product.html">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-6.jpg" width="84" height="84" alt="product">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-6-2.jpg" width="84" height="84" alt="product">
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">Men Black Gentle Belt</a> </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top">5.00</span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">$49.00</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="800">
+                    <h4 class="section-sub-title">SẢN PHẨM MỚI NHẤT</h4>
+                    @foreach ($newProducts as $item)
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="{{route('detail',$item->slug)}}">
+                                <img src="{{ asset('uploads') }}/{{ $item->image }}" width="84" height="84" alt="product">
+
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">{{$item->name}}</a>
+                            </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">{{number_format($item->sale_price)}} VND</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+
+                    </div>
+
+                    @endforeach
+
+
+                </div>
+
+                <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="1100">
+                    <h4 class="section-sub-title">Top Rated Products</h4>
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="product.html">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-10.jpg" width="84" height="84" alt="product">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-10-2.jpg" width="84" height="84" alt="product">
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">Basketball Sports Blue Shoes</a>
+                            </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">$49.00</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="product.html">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-11.jpg" width="84" height="84" alt="product">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-11-2.jpg" width="84" height="84" alt="product">
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">Men Sports Travel Bag</a> </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top">5.00</span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">$49.00</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+
+                    <div class="product-default left-details product-widget">
+                        <figure>
+                            <a href="product.html">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-12.jpg" width="84" height="84" alt="product">
+                                <img src="{{asset('fe-asset')}}/images/products/small/product-12-2.jpg" width="84" height="84" alt="product">
+                            </a>
+                        </figure>
+
+                        <div class="product-details">
+                            <h3 class="product-title"> <a href="product.html">Brown HandBag</a> </h3>
+
+                            <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <!-- End .ratings -->
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                                <!-- End .product-ratings -->
+                            </div>
+                            <!-- End .product-container -->
+
+                            <div class="price-box">
+                                <span class="product-price">$49.00</span>
+                            </div>
+                            <!-- End .price-box -->
+                        </div>
+                        <!-- End .product-details -->
+                    </div>
+                </div>
+            </div>
+            <!-- End .row -->
+        </div>
+    </section>
+</main>
+
+@endsection
