@@ -41,7 +41,7 @@
                     <li>
                         <a href="category.html">Categories</a>
                         <ul>
-                            <a href="" class="product-category">{{$item->parentCategory->name}}</a>
+                         
 
                         </ul>
                     </li>

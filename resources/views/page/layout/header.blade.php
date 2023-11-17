@@ -11,11 +11,11 @@
                     <a href="#">Links</a>
                     <div class="header-menu">
                         <ul>
-                            <li><a href="{{ route('login') }}">Tài khoản</a></li>
+
                             <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên Hệ </a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="wishlist.html">My Wishlist</a></li>
-                            <li><a href="">Giỏ hàng</a></li>
+                            <li><a href="{{route('admin.logon')}}">Admin</a></li>
                             <li class="item-menu">
                                 <a class="login" href="{{route('login')}}">Đăng Nhập</a>
                             </li>
@@ -230,94 +230,27 @@
                         <a href={{route('index')}}>Home</a>
                     </li>
                     <li>
-                        <a href="category.html">Categories</a>
+                        <a href="">Danh mục</a>
                         <div class="megamenu megamenu-fixed-width megamenu-3cols">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <a href="#" class="nolink">VARIATION 1</a>
+                                    @foreach ($category as $value)
                                     <ul class="submenu">
-                                        <a href="" class="product-category">{{$item->parentCategory->name}}</a>
-                                        <a href="" class="product-category">{{$item->parentCategory->name}}</a>
-                                        <a href="" class="product-category">{{$item->parentCategory->name}}</a>
+                                        <a href="{{route('list.category',['id'=>$value->id])}}" class="product-category">{{$value->name}}</a>
+
                                     </ul>
+
+                                    @endforeach
+
                                 </div>
 
-                                <div class="col-lg-4 p-0">
-                                    <div class="menu-banner">
-                                        <figure>
-                                            <img src="{{asset('fe-asset')}}/images/menu-banner.jpg" width="192" height="313" alt="Menu banner">
-                                        </figure>
-                                        <div class="banner-content">
-                                            <h4>
-                                                <span class="">UP TO</span><br />
-                                                <b class="">50%</b>
-                                                <i>OFF</i>
-                                            </h4>
-                                            <a href="category.html" class="btn btn-sm btn-dark">SHOP NOW</a>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <!-- End .megamenu -->
                     </li>
                     <li>
-                        <a href="product.html">Products</a>
-                        <div class="megamenu megamenu-fixed-width">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <a href="#" class="nolink">PRODUCT PAGES</a>
-                                    <ul class="submenu">
-                                        <li><a href="product.html">SIMPLE PRODUCT</a></li>
-                                        <li><a href="product-variable.html">VARIABLE PRODUCT</a></li>
-                                        <li><a href="product.html">SALE PRODUCT</a></li>
-                                        <li><a href="product.html">FEATURED & ON SALE</a></li>
-                                        <li><a href="product-custom-tab.html">WITH CUSTOM TAB</a></li>
-                                        <li><a href="product-sidebar-left.html">WITH LEFT SIDEBAR</a></li>
-                                        <li><a href="product-sidebar-right.html">WITH RIGHT SIDEBAR</a></li>
-                                        <li><a href="product-addcart-sticky.html">ADD CART STICKY</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End .col-lg-4 -->
-
-                                <div class="col-lg-4">
-                                    <a href="#" class="nolink">PRODUCT LAYOUTS</a>
-                                    <ul class="submenu">
-                                        <li><a href="product-extended-layout.html">EXTENDED LAYOUT</a></li>
-                                        <li><a href="product-grid-layout.html">GRID IMAGE</a></li>
-                                        <li><a href="product-full-width.html">FULL WIDTH LAYOUT</a></li>
-                                        <li><a href="product-sticky-info.html">STICKY INFO</a></li>
-                                        <li><a href="product-sticky-both.html">LEFT & RIGHT STICKY</a></li>
-                                        <li><a href="product-transparent-image.html">TRANSPARENT IMAGE</a></li>
-                                        <li><a href="product-center-vertical.html">CENTER VERTICAL</a></li>
-                                        <li><a href="#">BUILD YOUR OWN</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End .col-lg-4 -->
-
-                                <div class="col-lg-4 p-0">
-                                    <div class="menu-banner menu-banner-2">
-                                        <figure>
-                                            <img src="{{asset('fe-asset')}}/images/menu-banner-1.jpg" width="182" height="317" alt="Menu banner" class="product-promo">
-                                        </figure>
-                                        <i>OFF</i>
-                                        <div class="banner-content">
-                                            <h4>
-                                                <span class="">UP TO</span><br />
-                                                <b class="">50%</b>
-                                            </h4>
-                                        </div>
-                                        <a href="category.html" class="btn btn-sm btn-dark">SHOP NOW</a>
-                                    </div>
-                                </div>
-                                <!-- End .col-lg-4 -->
-                            </div>
-                            <!-- End .row -->
-                        </div>
-                        <!-- End .megamenu -->
-                    </li>
-                    <li>
-                        <a href="#">Pages</a>
+                        <a href="#">Trang</a>
                         <ul>
                             <li><a href="wishlist.html">Wishlist</a></li>
                             <li><a href="cart.html">Shopping Cart</a></li>
@@ -357,7 +290,7 @@
                             <li><a href="element-testimonial.html">Testimonials</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên hệ</a></li>
                     <li class="float-right"><a href="" class="pl-5">
                         @if(auth()->check())
                         <p>Chúc bạn một ngày vui vẻ </p>

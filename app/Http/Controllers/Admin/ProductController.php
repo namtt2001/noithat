@@ -99,17 +99,19 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit( $id)
     {
+        $categories = Category::all();
         $product = Product::find($id);
-        return view('admin.product.edit', compact('product'));
+        return view('admin.product.edit', compact('product','categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request,  $id)
     {
+        $product=Product::find($id);
         $storagePath = public_path('uploads');
         echo $storagePath;
         if ($request->hasFile('photo')) {
@@ -117,22 +119,23 @@ class ProductController extends Controller
             $fileName = time() . '.' . $avatar->getClientOriginalExtension();
             $avatar->move(public_path('uploads'), $fileName);
         } else {
-            $fileName = null; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
+            $fileName =$product->image; // Đảm bảo biến $fileName được định nghĩa dù có tải lên tệp ảnh hay không
         }
+        Product::find($id)->update([
+        'name' => $request->name,
+        'slug' => $request->slug,
+        'price' => $request->price,
+        'sale_price' => $request->sale_price,
+        'parent_id' => $request->parent_id,
+        'image' => $fileName,
+        'description' => $request->description,
+        ]);
 
-        $product = new Product();
-        $product->name = $request->input('name');
-        $product->slug = $request->input('slug');
-        $product->price = $request->input('price');
-        $product->sale_price = $request->input('sale_price');
-        $product->parent_id = $request->input('parent_id');
-        $product->image = $fileName;
-        $product->description = $request->input('description');
 
-        $product->save();
 
-        $productId = $product->id;
-        return redirect()->route('products.index');
+
+
+        return redirect()->route('products.index')->with ('success',' sửa thành công');
 
     }
 

@@ -1,5 +1,4 @@
 @extends('admin.master')
-@section('title', 'Trang Admin')
 @section('title-page', 'Sửa sản phẩm')
 <!-- Main content -->
 @section('main-content')
@@ -10,7 +9,8 @@
                 <!-- general form elements -->
         <div class="box box-primary">
         <div class="box-header with-border"> </div>
-         <form role="form" method="POST" action="{{ route('products.update',$product->id ) }}" enctype="multipart/form-data">
+         <form role="form" method="POST"  action="{{ route('products.update',$product->id ) }}" enctype="multipart/form-data">
+              @method("PUT")
 
             @csrf
 
@@ -56,8 +56,9 @@
 
                 <div class="col-md-6">
                     <div class="form-group @error('name') has-error @enderror">
-                        <label for="exampleInputEmail1">Ảnh sản phẩm</label>
-                        <input type="file" class="form-control" id="menu" name="photo" value="{{ $product->photo }}" >
+                        <label for="">Ảnh sản phẩm</label>
+                        <input type="file" class="form-control" id="" name="photo"  >
+                        <img src="{{url('uploads')}}/{{$product->image}}" alt="{{url('uploads')}}/{{$product->image}}" width="50px">
                         @error('name')
                             </span class="help-block">{{ $message }}</span>
                         @enderror
@@ -66,12 +67,11 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Chọn Danh Mục</label>
-                        <select name="parent_id" id="input" class="form-control" value="{{ $product->parent_id }}" required>
-                            <option value="">Chọn danh mục cha </option>
-                            <td>
-                                {{ $item->parentCategory->name ?? 'null' }}
-                            </td>
-
+                        <select name="parent_id" id="input" class="form-control"  >
+                            <option value="">Chọn danh mục  </option>
+                            @foreach ($categories as $item)
+                             <option value="{{$item ->id}}"{{($item->id == $product->parent_id)?'selected':''}}>{{$item->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -85,13 +85,19 @@
                     </div>
 
                 </div>
+                <div class="col-md-6">
+                    <div class="form-group @error('name') has-error @enderror">
+                        <label for="exampleInputEmail1">Sản phẩm nổi bật</label>
+                        <input type="checkbox" id="menu" name="stock" value="{{ $product->stock }}" >
+                        @error('name')
+                            </span class="help-block">{{ $message }}</span>
+                        @enderror
+                </div>
 
             </div>
                 <div class="form-group @error('name') has-error @enderror">
                     <label for="exampleInputEmail1">Mô tả sản phẩm</label>
-                    <textarea name="description" id="editor1" rows="7" cols="80" value="{{ $product->description }}" required>
-
-                             </textarea>
+                    <textarea name="description" id="editor1" rows="7" cols="80" value="{{ $product->description }}" >{{ $product->description }} </textarea>
                 </div>
 
             </div>

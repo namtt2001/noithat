@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\Product;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\User\CategoryProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +42,8 @@ use App\Http\Controllers\Admin\AdminController;
 
     //Route::get('/detail/{slug}',[HomeController::class,'detail'])->name('detail');
 
+    Route::get('/list-category/{id}/pro', [HomeController::class,'list'])->name('list.category');
+
 
 
 
@@ -49,6 +53,7 @@ use App\Http\Controllers\Admin\AdminController;
 
 Route::prefix('admin')->middleware('admin')->group(function(){
     Route::get('/', [DashBoadController::class, 'index'])->name('admin.index');
+    //category
     Route::resource('category',CategoryControler::class);
     Route::get('/category-trash', [CategoryControler::class, 'trash'])->name('category.trash');
     Route::get('/category/{id}/restore', [CategoryControler::class, 'restore'])->name('category.restore');
