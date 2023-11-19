@@ -15,7 +15,7 @@
                             <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên Hệ </a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="wishlist.html">My Wishlist</a></li>
-                            <li><a href="{{route('admin.logon')}}">Admin</a></li>
+                            <li><a href="{{route('admin.index')}}">Admin</a></li>
                             <li class="item-menu">
                                 <a class="login" href="{{route('login')}}">Đăng Nhập</a>
                             </li>
@@ -85,17 +85,10 @@
             <div class="header-right w-lg-max">
                 <div class="header-icon header-search header-search-inline header-search-category w-lg-max text-right mt-0">
                     <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
-                    <form action="#" method="get">
+                    <form action="{{ route('search') }}" method="get">
                         <div class="header-search-wrapper">
-                            <input type="search" class="form-control" name="q" id="q" placeholder="Search..." required>
-                            <div class="select-custom">
-                                <select id="cat" name="cat">
-                                    <option value="">All Categories</option>
-
-                                </select>
-                            </div>
-                            <!-- End .select-custom -->
-                            <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
+                            <input type="text" class="form-control" name="key" id="searchfrom" placeholder="Tìm Kiếm sản phẩm..." >
+                            <button  class="btn icon-magnifier p-0" title="search" type="submit"></button>
                         </div>
                         <!-- End .header-search-wrapper -->
                     </form>

@@ -25,6 +25,7 @@ use App\Http\Controllers\User\CategoryProductController;
 
 
     Route::get('/',[HomeController::class,'index'])->name('index');
+    Route::post('/seach',[HomeController::class,'seach'])->name('seach');
 
     Route::get('/products/{slug}/detail',[HomeController::class,'detail'])->name('detail');
 
@@ -33,6 +34,13 @@ use App\Http\Controllers\User\CategoryProductController;
 
     Route::get('/register',[UserController::class,'register'])->name('register');
     Route::post('/register',[UserController::class,'postRegister']);
+
+    Route::get('/admin/user', [UserController::class, 'index']) ->name('admin.user');
+    Route::get('/admin/user/add', [UserController::class, 'create']) ->name('admin.user.create');
+    Route::post('/admin/user/add', [UserController::class, 'store']) ->name('admin.user.add');
+    Route::get('/admin/user/edit/{id}', [UserController::class, 'edit']) ->name('admin.user.edit');
+    Route::put('/admin/user/edit/{id}', [UserController::class, 'update']) ->name('admin.user.update');
+    Route::delete('admin/user/delete/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
 
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
@@ -43,6 +51,8 @@ use App\Http\Controllers\User\CategoryProductController;
     //Route::get('/detail/{slug}',[HomeController::class,'detail'])->name('detail');
 
     Route::get('/list-category/{id}/pro', [HomeController::class,'list'])->name('list.category');
+    Route::get('/search',[ProductController::class, 'Search'])->name('search');
+
 
 
 

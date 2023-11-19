@@ -87,7 +87,7 @@
                     </figure>
                     <div class="banner-layer">
                         <h3 class="m-b-2">Phòng Khách </h3>
-                        <a href="category.html" class="btn btn-sm btn-dark">Mua ngay</a>
+                        <a href="category.html" class="btn btn-sm btn-dark"></a>
                     </div>
                 </div>
                 <!-- End .banner -->
@@ -97,7 +97,7 @@
                     </figure>
                     <div class="banner-layer">
                         <h3 class="m-b-2">Phòng Ăn </h3>
-                        <a href="category.html" class="btn btn-sm btn-dark">Mua ngay</a>
+                        <a href="category.html" class="btn btn-sm btn-dark"></a>
                     </div>
                 </div>
                 <!-- End .banner -->
@@ -112,7 +112,7 @@
                       </style>
                     <div class="banner-layer">
                         <h3 class="m-b-2">Phòng Ngủ </h3>
-                        <a href="category.html" class="btn btn-sm btn-dark">Mua ngay</a>
+                        <a href="category.html" class="btn btn-sm btn-dark"></a>
                     </div>
                 </div>
             </div>
@@ -173,7 +173,6 @@
                     </div>
                     <!-- End .product-details -->
                 </div>
-
                 @endforeach
 
             </div>

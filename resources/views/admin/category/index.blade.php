@@ -13,20 +13,24 @@
         <div class="box">
             <div class="box-header">
                 <a href="{{ route('category.create') }}" class="btn btn-success">Thêm mới danh mục</a>
-                <div class="box-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+
+                <form >
+                    <div class="input-group input-group-sm" style="width: 250px;">
+                        <input  name="key" class="form-control right" placeholder="Tìm kiếm">
                         <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search">Tìm</i></button>
                         </div>
                     </div>
-                </div>
+                </form>
+                <hr>
+
             </div>
             <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
                     <tbody>
                         <tr>
-                            <th>STT</th>
+                            <th>ID</th>
                             <th>Tên danh mục</th>
                             <th>Danh mục cha</th>
                             <th>Ngày tạo</th>
@@ -35,7 +39,7 @@
                         </tr>
                         @forelse ($categories as $item)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $item->id }}</td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->parentCategory->name ?? 'null' }}</td>
                             <td>{{ $item->created_at }}</td>
@@ -62,5 +66,6 @@
             </div>
         </div>
     </div>
+
 </section>
 @endsection

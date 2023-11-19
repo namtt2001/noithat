@@ -1,4 +1,4 @@
-@extends('page.home')
+@extends('page.index')
 @section('main')
 <main class="main">
     <div class="page-header">
@@ -19,29 +19,41 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="heading mb-1">
-                            <h2 class="row justify-content-center">Register</h2>
+                            <h2 class="row justify-content-center">Đăng Ký </h2>
                         </div>
                         <form method="POST" action="" >
                             @csrf
                             <label for="register-name">
-                                Full Name
+                                Tên Tài Khoản
                                 <span class="required">*</span>
                             </label>
                             <input type="text" class="form-input form-wide" id="register-name"name ="name" required />
 
                             <label for="register-email">
-                                Email address
+                                Email
                                 <span class="required">*</span>
                             </label>
                             <input type="email" class="form-input form-wide" id="register-email" name = "email" required />
+                            <label for="register-phone">
+                                Số điện thoại
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-input form-wide" id="register-name"name ="phone" required />
+                            <label for="register-name">
+                                Địa chỉ
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-input form-wide" id="register-name"name ="address" required />
+
+
 
                             <label for="register-password">
-                                Password
+                                Mật Khẩu
                                 <span class="required">*</span>
                             </label>
                             <input type="password" class="form-input form-wide" id="register-password" name="password"required />
                             <label for="login-confirm password">
-                                Confirm Password
+                                Nhập Lại Mật Khẩu
                                 <span class="required">*</span>
                             </label>
                             <input type="confirm password" class="form-input form-wide" id="login-confirm password" name="confirm password" required />
@@ -51,7 +63,7 @@
                                     class="forget-password text-dark form-footer-right">Bạn đã có Account</a>
                             <div class="form-footer mb-2">
                                 <button type="submit" class="btn btn-dark btn-md w-100 mb-0">
-                                    Register
+                                    Đăng ký
                                 </button>
                             </div>
                         </form>

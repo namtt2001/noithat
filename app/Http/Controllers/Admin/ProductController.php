@@ -151,4 +151,10 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success',' Xoá   thành công');
 
     }
+    public function Search(Request $req){
+        $product = Product::where('name','like','%'.$req->key.'%')
+                            ->orWhere('price',$req->key)
+                            ->get();
+        return view('page.search',compact('product'));
+    }
 }

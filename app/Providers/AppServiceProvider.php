@@ -22,8 +22,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('*',function($view){
-            $view->with([
-                'category'=>Category::where('status',0)->orderBy('name','ASC')->get(),
+        $view->with([
+            'category'=>Category::where('status',1)->orderBy('name','ASC')->get(),
         ]);
 
         });

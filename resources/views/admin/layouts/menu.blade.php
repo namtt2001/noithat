@@ -56,7 +56,7 @@
         </li>
 
         <li>
-          <a href="">
+          <a href="{{ route('admin.user') }}">
             <i class="fa fa-th"></i> <span>Người dùng</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">Hot</small>

@@ -23,10 +23,12 @@ class HomeController extends Controller
         return view('page.detail',compact('detail','related'));
     }
     public function list($id){
+        $featuredProducts = Product::where('stock',1)->take(4)->get();
         $category = Category::where('id',$id)->first();
         $product = Product::where('parent_id',$category->id)->get();
-      return view('page.list_category',compact('product'));
+      return view('page.list_category',compact('product','featuredProducts'));
     }
+    
 
 
 

@@ -22,7 +22,7 @@
                   </div>
                   <!-- /.box-header -->
                   <!-- form start -->
-                  <form role="form" method="POST" action="{{route('category.update',$category)}}">
+                  <form  method="POST" enctype="multipart/form-data" action="{{route('category.update',$category)}}">
                     @method('PUT')
                     @csrf
                     <input type="hidden" name="id" value="{{$category->id}}">
@@ -74,5 +74,3 @@
     </section>
 
     @endsection
-
-
