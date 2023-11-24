@@ -132,13 +132,10 @@
 
                     <figure>
                         <a href="{{route('detail',$item->slug)}}">
-                            <img src="{{ asset('uploads') }}/{{ $item->image }}" width="280" height="280" alt="product">
-
-
+                            <img src="{{ asset('uploads')}}/{{ $item->image }}" width="280" height="280" alt="product">
                         </a>
                         <div class="label-group">
                             <div class="product-label label-hot">HOT</div>
-                            <div class="product-label label-sale">-20%</div>
                         </div>
                     </figure>
                     <div class="product-details">
@@ -165,8 +162,15 @@
                         <div class="product-action">
                             <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
                                     class="icon-heart"></i></a>
-                            <a href="product.html" class="btn-icon btn-add-cart"><i
-                                    class="fa fa-arrow-right"></i><span>Mua Ngay</span></a>
+
+                                    <form action="{{route('cart.create')}}" method="POST" >
+                                         <input class=" form-control" type="hidden" value="1" name ="quantity" >
+                                            @csrf
+                                            <input type="hidden" class="form-control" id="" name="product_id" value="{{$item->id}}">
+                                            <button class="btn btn-dark  mr-2" title="Thêm giỏ hàng">Thêm giỏ hàng</button>
+
+                                        </form>
+
                             <a href="{{route('detail',$item->slug)}}" class="btn-quickview" title="Xem chi tiết"><i
                                     class="fas fa-external-link-alt"></i></a>
                         </div>
@@ -200,10 +204,11 @@
              <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                     <figure>
                         <a href="{{route('detail',$item->slug)}}">
-                            <img src="{{ asset('uploads') }}/{{ $item->image }}" width="220" height="150" alt="product">
+                            <img src="{{asset('uploads')}}/{{ $item->image }}" width="280" height="280" alt="product">
+                        </a>
 
                         <div class="label-group">
-                            <div class="product-label label-hot">HOT</div>
+                            <div class="product-label label-hot">New</div>
                         </div>
                     </figure>
                     <div class="product-details">
@@ -230,8 +235,15 @@
                         <div class="product-action">
                             <a href="wishlist.html" class="btn-icon-wish" title="wishlist"><i
                                     class="icon-heart"></i></a>
-                            <a href="#" class="btn-icon btn-add-cart product-type-simple"><i
-                                    class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+                                    <form action="{{route('cart.create')}}" method="POST" >
+
+                                            <input  class=" " type="hidden"value="1"name ="quantity" >
+                                       
+                                            @csrf
+                                            <input type="hidden" class="form-control" id="" name="product_id" value="{{$item->id}}">
+                                            <button class="btn btn-dark  mr-2" title="Thêm giỏ hàng">Thêm giỏ hàng</button>
+
+                                        </form>
                             <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i
                                     class="fas fa-external-link-alt"></i></a>
                         </div>

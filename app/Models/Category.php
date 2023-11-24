@@ -12,7 +12,7 @@ class Category extends Model
     use SoftDeletes;
 
     protected $fillable = ['name', 'parent_id','status'];
-    
+
     public function parentCategory()
 {
     return $this->belongsTo(Category::class, 'parent_id');

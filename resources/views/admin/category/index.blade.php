@@ -12,26 +12,22 @@
         @endif
         <div class="box">
             <div class="box-header">
-                <a href="{{ route('category.create') }}" class="btn btn-success">Thêm mới danh mục</a>
-
-
-                <form >
-                    <div class="input-group input-group-sm" style="width: 250px;">
-                        <input  name="key" class="form-control right" placeholder="Tìm kiếm">
+                <a href="{{ route('category.create') }}" class="btn btn-success">Thêm mới danh muc</a>
+                <div class="box-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
                         <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default"><i class="fa fa-search">Tìm</i></button>
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
-                </form>
-                <hr>
-
+                </div>
             </div>
             <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
                     <tbody>
                         <tr>
                             <th>ID</th>
-                            <th>Tên danh mục</th>
+                            <th>Tên danh mục </th>
                             <th>Danh mục cha</th>
                             <th>Ngày tạo</th>
                             <th>Trạng thái</th>

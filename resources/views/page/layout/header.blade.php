@@ -15,7 +15,7 @@
                             <li><a href="https://www.facebook.com/xuonggo.thainguyen.9">Liên Hệ </a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="wishlist.html">My Wishlist</a></li>
-                            <li><a href="{{route('admin.index')}}">Admin</a></li>
+
                             <li class="item-menu">
                                 <a class="login" href="{{route('login')}}">Đăng Nhập</a>
                             </li>
@@ -110,7 +110,7 @@
                 <div class="dropdown cart-dropdown">
                     <a href="#" title="Giỏ Hàng" class="dropdown-toggle dropdown-arrow cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="minicart-icon"></i>
-                        <span class="cart-count badge-circle">3</span>
+                        <span class="cart-count badge-circle"></span>
                     </a>
 
                     <div class="cart-overlay"></div>
@@ -120,8 +120,6 @@
 
                         <div class="dropdownmenu-wrapper custom-scrollbar">
                             <div class="dropdown-cart-header">Shopping Cart</div>
-                            <!-- End .dropdown-cart-header -->
-
                             <div class="dropdown-cart-products">
                                 <div class="product">
                                     <div class="product-details">
@@ -145,47 +143,7 @@
                                 </div>
                                 <!-- End .product -->
 
-                                <div class="product">
-                                    <div class="product-details">
-                                        <h4 class="product-title">
-                                            <a href="product.html">Brown Women Casual HandBag</a>
-                                        </h4>
 
-                                        <span class="cart-product-info">
-                                            <span class="cart-product-qty">1</span> × $35.00
-                                        </span>
-                                    </div>
-                                    <!-- End .product-details -->
-
-                                    <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
-                                            <img src="{{asset('fe-asset')}}/images/products/product-2.jpg" alt="product" width="80" height="80">
-                                        </a>
-
-                                        <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                    </figure>
-                                </div>
-                                <!-- End .product -->
-
-                                <div class="product">
-                                    <div class="product-details">
-                                        <h4 class="product-title">
-                                            <a href="product.html">Circled Ultimate 3D Speaker</a>
-                                        </h4>
-
-                                        <span class="cart-product-info">
-                                            <span class="cart-product-qty">1</span> × $35.00
-                                        </span>
-                                    </div>
-                                    <!-- End .product-details -->
-
-                                    <figure class="product-image-container">
-                                        <a href="product.html" class="product-image">
-                                            <img src="{{asset('fe-asset')}}/images/products/product-3.jpg" alt="product" width="80" height="80">
-                                        </a>
-                                        <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
-                                    </figure>
-                                </div>
                                 <!-- End .product -->
                             </div>
                             <!-- End .cart-product -->

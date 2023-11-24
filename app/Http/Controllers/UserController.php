@@ -112,13 +112,6 @@ class UserController extends Controller
         return view('admin.user.edit', compact('user'));
     }
 
-
-
-
-
-
-
-
     /**
      * Update the specified resource in storage.
      */

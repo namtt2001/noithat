@@ -159,16 +159,17 @@
                             <del class="old-price">{{number_format($detail->price) }} VND </del>
                             <span class="product-price">{{number_format($detail->sale_price)}} VND</span>
                         </div>
-
+                        <form action="{{route('cart.create')}}" method="POST" >
                         <div class="product-single-qty">
-                            <input class="horizontal-quantity form-control" type="text">
+                            <input class="horizontal-quantity form-control" type="text"value="1"name ="quantity" >
                         </div>
-                        <!-- End .product-single-qty -->
+                            @csrf
+                            <input type="hidden" class="form-control" id="" name="product_id" value="{{$detail->id}}">
+                            <button class="btn btn-dark  mr-2" title="Thêm giỏ hàng">Thêm giỏ hàng</button>
 
-                        <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Add to
-                            Cart</a>
+                        </form>
 
-                        <a href="cart.html" class="btn btn-gray view-cart d-none">View cart</a>
+                        <a href="{{route('cart.index')}}" class="btn btn-gray view-cart d-none">View cart</a>
                     </div>
                     <!-- End .product-action -->
 

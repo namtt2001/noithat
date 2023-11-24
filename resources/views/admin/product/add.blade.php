@@ -85,16 +85,12 @@
                 <div class="col-md-6">
                     <div class="form-group @error('name') has-error @enderror">
                         <label for="exampleInputEmail1">Sản phẩm nổi bật</label>
-                        <input type="checkbox" id="menu" name="stock" >
+                        <input type="checkbox" id="menu" name="stock" value="1" >
                         @error('name')
                             </span class="help-block">{{ $message }}</span>
                         @enderror
                 </div>
                 </div>
-
-
-
-
             </div>
             <div class="form-group @error('name') has-error @enderror">
                 <label for="exampleInputEmail1">Mô tả sản phẩm</label>

@@ -5,7 +5,7 @@
     <div class="container">
         <h2 class="section-title heading-border ls-20 border-0">Tìm kiếm</h2>
             <div class="beta-products-details">
-                <p class="pull-left">Tìm thấy {{count($product)}}</p>
+                <p class="pull-left">Tìm thấy {{count($product)}} sản phẩm</p>
                 <div class="clearfix"></div>
             </div>
 
@@ -21,7 +21,7 @@
 
 
                     </a>
-                    
+
                 </figure>
                 <div class="product-details">
                     <div class="category-list">

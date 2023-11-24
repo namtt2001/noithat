@@ -28,7 +28,7 @@ class HomeController extends Controller
         $product = Product::where('parent_id',$category->id)->get();
       return view('page.list_category',compact('product','featuredProducts'));
     }
-    
+
 
 
 

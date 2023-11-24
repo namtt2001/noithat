@@ -9,8 +9,6 @@
       <!-- Default box -->
       <div class="col-xs-12">
           <div class="box">
-
-
             </div>
             <!-- /.box-header -->
             <div class="col-md-8">

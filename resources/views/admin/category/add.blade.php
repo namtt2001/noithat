@@ -9,7 +9,7 @@
       <!-- Default box -->
       <div class="col-xs-12">
           <div class="box">
-           <a href="{{route('category.create')}}" ></a>
+           
 
             </div>
             <!-- /.box-header -->

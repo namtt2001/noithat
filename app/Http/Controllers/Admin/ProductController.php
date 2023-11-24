@@ -57,6 +57,7 @@ class ProductController extends Controller
         $product->parent_id = $request->input('parent_id');
         $product->image = $fileName;
         $product->description = $request->input('description');
+        $product->stock = isset($request->stock) ? true : false;
 
         $product->save();
 
@@ -130,11 +131,6 @@ class ProductController extends Controller
         'image' => $fileName,
         'description' => $request->description,
         ]);
-
-
-
-
-
         return redirect()->route('products.index')->with ('success',' sửa thành công');
 
     }
@@ -152,9 +148,12 @@ class ProductController extends Controller
 
     }
     public function Search(Request $req){
+        $category = Category::where('name','like','%'.$req->key.'%')
+                            
+                            ->get();
         $product = Product::where('name','like','%'.$req->key.'%')
                             ->orWhere('price',$req->key)
                             ->get();
-        return view('page.search',compact('product'));
+        return view('page.search',compact('product','category'));
     }
 }
